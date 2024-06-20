@@ -1,0 +1,1 @@
+/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/include/../EWIEGA46WW/moc_people.cpp.json

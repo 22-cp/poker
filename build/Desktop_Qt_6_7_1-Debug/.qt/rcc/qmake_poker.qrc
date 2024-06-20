@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/poker">
+    <file alias="qmldir">/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/poker/qmldir</file>
+  </qresource>
+</RCC>
+

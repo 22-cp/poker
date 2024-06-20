@@ -1,0 +1,52 @@
+[
+    {
+        "classes": [
+            {
+                "className": "people",
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "touchCard",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "output1",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "sortHand",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "usingCard",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "n",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "select",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "people",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "people.h",
+        "outputRevision": 68
+    }
+]
