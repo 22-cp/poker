@@ -1139,7 +1139,19 @@
 	"HEADERS" : 
 	[
 		[ "/root/poker/poker/desk.h", "MU", "EWIEGA46WW/moc_desk.cpp", null ],
-		[ "/root/poker/poker/people.h", "MU", "EWIEGA46WW/moc_people.cpp", null ]
+		[ "/root/poker/poker/people.h", "MU", "EWIEGA46WW/moc_people.cpp", null ],
+		[
+			"/root/poker/poker/qtserver.h",
+			"MU",
+			"EWIEGA46WW/moc_qtserver.cpp",
+			null
+		],
+		[
+			"/root/poker/poker/qtsocket.h",
+			"MU",
+			"EWIEGA46WW/moc_qtsocket.cpp",
+			null
+		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/include",
@@ -1221,7 +1233,7 @@
 		"/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_qmltyperegistrations.cpp"
 	],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 8,
+	"PARALLEL" : 10,
 	"PARSE_CACHE_FILE" : "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/apppoker_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/opt/Qt/6.7.1/gcc_64/./libexec/moc",
 	"QT_UIC_EXECUTABLE" : "",
@@ -1232,7 +1244,9 @@
 	[
 		[ "/root/poker/poker/desk.cpp", "MU", null ],
 		[ "/root/poker/poker/main.cpp", "MU", null ],
-		[ "/root/poker/poker/people.cpp", "MU", null ]
+		[ "/root/poker/poker/people.cpp", "MU", null ],
+		[ "/root/poker/poker/qtserver.cpp", "MU", null ],
+		[ "/root/poker/poker/qtsocket.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

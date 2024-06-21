@@ -19,6 +19,8 @@ qt_add_qml_module(apppoker
     SOURCES people.h people.cpp
     RESOURCES CardLibrary
     SOURCES desk.h desk.cpp
+    SOURCES qtserver.h qtserver.cpp
+    SOURCES qtsocket.h qtsocket.cpp
 )
 
 target_compile_features(apppoker PRIVATE cxx_std_20)

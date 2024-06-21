@@ -901,6 +901,10 @@ apppoker_autogen/timestamp: \
 	/root/poker/poker/main.cpp \
 	/root/poker/poker/people.cpp \
 	/root/poker/poker/people.h \
+	/root/poker/poker/qtserver.cpp \
+	/root/poker/poker/qtserver.h \
+	/root/poker/poker/qtsocket.cpp \
+	/root/poker/poker/qtsocket.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \

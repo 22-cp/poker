@@ -549,6 +549,54 @@ people.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/people.cpp.s
 .PHONY : people.cpp.s
 
+qtserver.o: qtserver.cpp.o
+.PHONY : qtserver.o
+
+# target to build an object file
+qtserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/qtserver.cpp.o
+.PHONY : qtserver.cpp.o
+
+qtserver.i: qtserver.cpp.i
+.PHONY : qtserver.i
+
+# target to preprocess a source file
+qtserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/qtserver.cpp.i
+.PHONY : qtserver.cpp.i
+
+qtserver.s: qtserver.cpp.s
+.PHONY : qtserver.s
+
+# target to generate assembly for a file
+qtserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/qtserver.cpp.s
+.PHONY : qtserver.cpp.s
+
+qtsocket.o: qtsocket.cpp.o
+.PHONY : qtsocket.o
+
+# target to build an object file
+qtsocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/qtsocket.cpp.o
+.PHONY : qtsocket.cpp.o
+
+qtsocket.i: qtsocket.cpp.i
+.PHONY : qtsocket.i
+
+# target to preprocess a source file
+qtsocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/qtsocket.cpp.i
+.PHONY : qtsocket.cpp.i
+
+qtsocket.s: qtsocket.cpp.s
+.PHONY : qtsocket.s
+
+# target to generate assembly for a file
+qtsocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/qtsocket.cpp.s
+.PHONY : qtsocket.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -601,6 +649,12 @@ help:
 	@echo "... people.o"
 	@echo "... people.i"
 	@echo "... people.s"
+	@echo "... qtserver.o"
+	@echo "... qtserver.i"
+	@echo "... qtserver.s"
+	@echo "... qtsocket.o"
+	@echo "... qtsocket.i"
+	@echo "... qtsocket.s"
 .PHONY : help
 
 
