@@ -896,6 +896,8 @@ apppoker_autogen/timestamp: \
 	/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/moc_predefs.h \
+	/root/poker/poker/desk.cpp \
+	/root/poker/poker/desk.h \
 	/root/poker/poker/main.cpp \
 	/root/poker/poker/people.cpp \
 	/root/poker/poker/people.h \

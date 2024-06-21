@@ -5,11 +5,6 @@
             "methods": [
                 {
                     "access": "public",
-                    "name": "touchCard",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
                     "name": "output1",
                     "returnType": "void"
                 },

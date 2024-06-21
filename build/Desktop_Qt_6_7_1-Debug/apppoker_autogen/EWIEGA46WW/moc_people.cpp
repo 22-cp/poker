@@ -36,9 +36,8 @@ namespace {
 struct qt_meta_stringdata_CLASSpeopleENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSpeopleENDCLASS = QtMocHelpers::stringData(
     "people",
-    "touchCard",
-    "",
     "output1",
+    "",
     "sortHand",
     "usingCard",
     "select",
@@ -55,7 +54,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSpeopleENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,18 +62,16 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSpeopleENDCLASS[] = {
        0,       // signalCount
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   44,    2, 0x02,    1 /* Public */,
-       3,    0,   45,    2, 0x02,    2 /* Public */,
-       4,    0,   46,    2, 0x02,    3 /* Public */,
-       5,    0,   47,    2, 0x02,    4 /* Public */,
-       6,    1,   48,    2, 0x02,    5 /* Public */,
+       1,    0,   38,    2, 0x02,    1 /* Public */,
+       3,    0,   39,    2, 0x02,    2 /* Public */,
+       4,    0,   40,    2, 0x02,    3 /* Public */,
+       5,    1,   41,    2, 0x02,    4 /* Public */,
 
  // methods: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    7,
+    QMetaType::Void, QMetaType::Int,    6,
 
        0        // eod
 };
@@ -88,8 +85,6 @@ Q_CONSTINIT const QMetaObject people::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSpeopleENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<people, std::true_type>,
-        // method 'touchCard'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'output1'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'sortHand'
@@ -109,11 +104,10 @@ void people::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         auto *_t = static_cast<people *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->touchCard(); break;
-        case 1: _t->output1(); break;
-        case 2: _t->sortHand(); break;
-        case 3: _t->usingCard(); break;
-        case 4: _t->select((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 0: _t->output1(); break;
+        case 1: _t->sortHand(); break;
+        case 2: _t->usingCard(); break;
+        case 3: _t->select((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -138,13 +132,13 @@ int people::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 4;
     }
     return _id;
 }

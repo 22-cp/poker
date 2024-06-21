@@ -448,7 +448,7 @@ CMakeFiles/apppoker.dir/main.cpp.o: /root/poker/poker/main.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlerror.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlabstracturlinterceptor.h \
-  /opt/Qt/6.7.1/gcc_64/include/QtQml/QQmlEngine \
+  /opt/Qt/6.7.1/gcc_64/include/QtQml/QQmlEngine /root/poker/poker/desk.h \
   /root/poker/poker/people.h /opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QObject \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/fstream \

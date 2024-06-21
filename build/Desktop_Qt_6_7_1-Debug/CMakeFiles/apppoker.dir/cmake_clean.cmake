@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o.d"
   "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o"
   "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o.d"
+  "CMakeFiles/apppoker.dir/desk.cpp.o"
+  "CMakeFiles/apppoker.dir/desk.cpp.o.d"
   "CMakeFiles/apppoker.dir/main.cpp.o"
   "CMakeFiles/apppoker.dir/main.cpp.o.d"
   "CMakeFiles/apppoker.dir/people.cpp.o"

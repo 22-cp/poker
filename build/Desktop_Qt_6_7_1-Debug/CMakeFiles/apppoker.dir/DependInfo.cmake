@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp" "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o" "gcc" "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o.d"
   "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp" "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o" "gcc" "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o.d"
   "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp" "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o" "gcc" "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o.d"
+  "/root/poker/poker/desk.cpp" "CMakeFiles/apppoker.dir/desk.cpp.o" "gcc" "CMakeFiles/apppoker.dir/desk.cpp.o.d"
   "/root/poker/poker/main.cpp" "CMakeFiles/apppoker.dir/main.cpp.o" "gcc" "CMakeFiles/apppoker.dir/main.cpp.o.d"
   "/root/poker/poker/people.cpp" "CMakeFiles/apppoker.dir/people.cpp.o" "gcc" "CMakeFiles/apppoker.dir/people.cpp.o.d"
   )

@@ -25,7 +25,7 @@ public:
         std::string color;
     };
 
-    Q_INVOKABLE void touchCard();
+    //Q_INVOKABLE void touchCard();
     Q_INVOKABLE void output1();
     Q_INVOKABLE void sortHand();
     Q_INVOKABLE void usingCard();
@@ -37,8 +37,10 @@ public:
     int air1(std::vector<poker> tem);
     int air2(std::vector<poker> tem);
     int air3(std::vector<poker> tem);
+    void setHand(std::vector<poker> Poker);
 
+private:
     std::vector<poker> hand;
-    std::vector<poker> library;
+    //std::vector<poker> library;
     std::vector<int> output;
 };

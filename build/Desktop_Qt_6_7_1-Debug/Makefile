@@ -477,6 +477,30 @@ build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.s
 .PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.s
 
+desk.o: desk.cpp.o
+.PHONY : desk.o
+
+# target to build an object file
+desk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/desk.cpp.o
+.PHONY : desk.cpp.o
+
+desk.i: desk.cpp.i
+.PHONY : desk.i
+
+# target to preprocess a source file
+desk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/desk.cpp.i
+.PHONY : desk.cpp.i
+
+desk.s: desk.cpp.s
+.PHONY : desk.s
+
+# target to generate assembly for a file
+desk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/desk.cpp.s
+.PHONY : desk.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -568,6 +592,9 @@ help:
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.o"
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.i"
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.s"
+	@echo "... desk.o"
+	@echo "... desk.i"
+	@echo "... desk.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

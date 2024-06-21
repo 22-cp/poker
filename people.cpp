@@ -2,37 +2,37 @@
 
 people::people()
 {
-    std::ifstream file("/root/poker/poker/CardLibrary");
-    if (!file.is_open()) {
-        std::cerr << "牌库加载失败!" << endl;
-        return;
-    }
-    std::string line;
-    while (std::getline(file, line)) {
-        std::istringstream iss(line);
-        poker Poker;
-        iss >> Poker.num >> Poker.name >> Poker.color;
-        library.push_back(Poker);
-    }
-    file.close();
+    // std::ifstream file("/root/poker/poker/CardLibrary");
+    // if (!file.is_open()) {
+    //     std::cerr << "牌库加载失败!" << endl;
+    //     return;
+    // }
+    // std::string line;
+    // while (std::getline(file, line)) {
+    //     std::istringstream iss(line);
+    //     poker Poker;
+    //     iss >> Poker.num >> Poker.name >> Poker.color;
+    //     library.push_back(Poker);
+    // }
+    // file.close();
 
-    std::random_device rd;
-    std::mt19937 g(rd());
-    std::shuffle(library.begin(), library.end(), g);
+    // std::random_device rd;
+    // std::mt19937 g(rd());
+    // std::shuffle(library.begin(), library.end(), g);
 }
 
-void people::touchCard() //从牌库中抽取一张牌加入到手牌
-{
-    for (int i = 0; i < 17; i++) {
-        if (library.begin() == library.end()) {
-            cout << "No poker in it." << endl;
-            return;
-        }
-        auto c = library.begin();
-        hand.push_back(*c);
-        library.erase(library.begin());
-    }
-}
+// void people::touchCard() //从牌库中抽取一张牌加入到手牌
+// {
+//     for (int i = 0; i < 17; i++) {
+//         if (library.begin() == library.end()) {
+//             cout << "No poker in it." << endl;
+//             return;
+//         }
+//         auto c = library.begin();
+//         hand.push_back(*c);
+//         library.erase(library.begin());
+//     }
+//}
 
 void people::output1()
 {
@@ -386,4 +386,12 @@ int people::outPut(std::vector<people::poker> tem)
 void people::select(int n)
 {
     output.push_back(n);
+}
+
+void people::setHand(std::vector<poker> Poker)
+{
+    if (Poker.empty())
+        return;
+    hand.clear();
+    hand = Poker;
 }

@@ -1,0 +1,24 @@
+{
+    "classes": [
+        {
+            "className": "desk",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "touchCard",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "desk",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "desk.h",
+    "outputRevision": 68
+}

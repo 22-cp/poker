@@ -1138,6 +1138,7 @@
 	"DEP_FILE_RULE_NAME" : "apppoker_autogen/timestamp",
 	"HEADERS" : 
 	[
+		[ "/root/poker/poker/desk.h", "MU", "EWIEGA46WW/moc_desk.cpp", null ],
 		[ "/root/poker/poker/people.h", "MU", "EWIEGA46WW/moc_people.cpp", null ]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -1229,6 +1230,7 @@
 	"SETTINGS_FILE" : "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/apppoker_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/root/poker/poker/desk.cpp", "MU", null ],
 		[ "/root/poker/poker/main.cpp", "MU", null ],
 		[ "/root/poker/poker/people.cpp", "MU", null ]
 	],

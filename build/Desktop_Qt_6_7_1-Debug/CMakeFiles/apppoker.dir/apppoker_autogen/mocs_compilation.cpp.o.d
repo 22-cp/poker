@@ -1,6 +1,7 @@
 CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o: \
   /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/mocs_compilation.cpp \
-  /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/moc_people.cpp \
+  /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/moc_desk.cpp \
+  /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/../../../../desk.h \
   /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/../../../../people.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qdebug.h \
@@ -409,4 +410,5 @@ CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o: \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/bits/random.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/x86_64-pc-linux-gnu/bits/opt_random.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/bits/random.tcc \
-  /opt/Qt/6.7.1/gcc_64/include/QtCore/qtmochelpers.h
+  /opt/Qt/6.7.1/gcc_64/include/QtCore/qtmochelpers.h \
+  /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/moc_people.cpp

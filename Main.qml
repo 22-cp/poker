@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QmlPeople
+import QmlDesk
 
 ApplicationWindow {
     width: 640
@@ -9,18 +10,17 @@ ApplicationWindow {
     visible: true
     title: qsTr("hello, world")
 
-    People{
-        id:p1
+    Desk{
+        id:desk
     }
+
 
     Rectangle{
         width: 100;height: 100
         color: "red"
         TapHandler{
             onTapped: {
-                p1.touchCard()
-                p1.sortHand()
-                p1.output1()
+                desk.touchCard()
             }
         }
     }
