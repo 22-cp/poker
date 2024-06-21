@@ -7,6 +7,11 @@
                     "access": "public",
                     "name": "touchCard",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "p1output1",
+                    "returnType": "void"
                 }
             ],
             "object": true,

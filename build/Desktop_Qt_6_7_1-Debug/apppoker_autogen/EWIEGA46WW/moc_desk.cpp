@@ -37,7 +37,8 @@ struct qt_meta_stringdata_CLASSdeskENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSdeskENDCLASS = QtMocHelpers::stringData(
     "desk",
     "touchCard",
-    ""
+    "",
+    "p1output1"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -50,7 +51,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdeskENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -58,9 +59,11 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdeskENDCLASS[] = {
        0,       // signalCount
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x02,    1 /* Public */,
+       1,    0,   26,    2, 0x02,    1 /* Public */,
+       3,    0,   27,    2, 0x02,    2 /* Public */,
 
  // methods: parameters
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -76,6 +79,8 @@ Q_CONSTINIT const QMetaObject desk::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<desk, std::true_type>,
         // method 'touchCard'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'p1output1'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -88,6 +93,7 @@ void desk::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         (void)_t;
         switch (_id) {
         case 0: _t->touchCard(); break;
+        case 1: _t->p1output1(); break;
         default: ;
         }
     }
@@ -113,13 +119,13 @@ int desk::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

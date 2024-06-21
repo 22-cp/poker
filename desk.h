@@ -11,6 +11,9 @@ public:
     std::vector<int> getNum();
 
     Q_INVOKABLE void touchCard();
+    Q_INVOKABLE void p1output1();
+    Q_INVOKABLE void p1select();
+    Q_INVOKABLE void p1usingCard();
 
 private:
     std::vector<int> num;

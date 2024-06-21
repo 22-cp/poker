@@ -44,6 +44,14 @@ void desk::touchCard() //从牌库中抽取一张牌加入到手牌
         library.erase(library.begin());
     }
     p1->setHand(p1Hand);
+    p1->sortHand();
     p2->setHand(p2Hand);
+    p2->sortHand();
     p3->setHand(p3Hand);
+    p3->sortHand();
+}
+
+void desk::p1output1()
+{
+    p1->output1();
 }

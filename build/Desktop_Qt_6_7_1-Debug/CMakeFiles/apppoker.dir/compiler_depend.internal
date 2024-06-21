@@ -115,7 +115,9 @@ CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o
  /opt/Qt/6.7.1/gcc_64/include/QtCore/qversiontagging.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/qxptype_traits.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/qyieldcpu.h
+ /root/poker/poker/desk.h
  /root/poker/poker/people.h
+ /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/moc_desk.cpp
  /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/moc_people.cpp
  /usr/include/c++/14.1.1/algorithm
  /usr/include/c++/14.1.1/array
@@ -2548,6 +2550,7 @@ CMakeFiles/apppoker.dir/main.cpp.o
  /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlexports.h
  /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlglobal.h
  /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h
+ /root/poker/poker/desk.h
  /root/poker/poker/people.h
  /usr/include/c++/14.1.1/algorithm
  /usr/include/c++/14.1.1/array

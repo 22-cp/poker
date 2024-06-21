@@ -21,6 +21,7 @@ ApplicationWindow {
         TapHandler{
             onTapped: {
                 desk.touchCard()
+                desk.p1output1()
             }
         }
     }

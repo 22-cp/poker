@@ -114,7 +114,9 @@ CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o: apppoker_autoge
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qversiontagging.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qxptype_traits.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qyieldcpu.h \
+  /root/poker/poker/desk.h \
   /root/poker/poker/people.h \
+  apppoker_autogen/EWIEGA46WW/moc_desk.cpp \
   apppoker_autogen/EWIEGA46WW/moc_people.cpp \
   /usr/include/c++/14.1.1/algorithm \
   /usr/include/c++/14.1.1/array \
@@ -2540,6 +2542,7 @@ CMakeFiles/apppoker.dir/main.cpp.o: /root/poker/poker/main.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlexports.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlglobal.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
+  /root/poker/poker/desk.h \
   /root/poker/poker/people.h \
   /usr/include/c++/14.1.1/algorithm \
   /usr/include/c++/14.1.1/array \
@@ -3365,8 +3368,6 @@ CMakeFiles/apppoker.dir/people.cpp.o: /root/poker/poker/people.cpp \
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qcoreapplication_platform.h:
 
-/root/poker/poker/desk.h:
-
 /usr/include/c++/14.1.1/bits/fs_dir.h:
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qfiledevice.h:
@@ -3563,10 +3564,6 @@ CMakeFiles/apppoker.dir/people.cpp.o: /root/poker/poker/people.cpp \
 
 /usr/include/bits/environments.h:
 
-/usr/include/libintl.h:
-
-/usr/include/bits/endianness.h:
-
 /opt/Qt/6.7.1/gcc_64/include/QtQml/qjsmanagedvalue.h:
 
 /usr/include/bits/confname.h:
@@ -3695,6 +3692,8 @@ apppoker_qmltyperegistrations.cpp:
 
 /usr/include/c++/14.1.1/ext/concurrence.h:
 
+/usr/include/c++/14.1.1/ext/atomicity.h:
+
 /usr/include/c++/14.1.1/bits/alloc_traits.h:
 
 /usr/include/c++/14.1.1/concepts:
@@ -3718,6 +3717,14 @@ apppoker_autogen/EWIEGA46WW/moc_people.cpp:
 /usr/include/sys/types.h:
 
 /usr/include/c++/14.1.1/bits/stl_vector.h:
+
+/usr/include/libintl.h:
+
+/usr/include/bits/endianness.h:
+
+apppoker_autogen/EWIEGA46WW/moc_desk.cpp:
+
+/usr/include/c++/14.1.1/bits/functional_hash.h:
 
 /usr/include/bits/types/__mbstate_t.h:
 
@@ -3772,8 +3779,6 @@ apppoker_autogen/EWIEGA46WW/moc_people.cpp:
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++io.h:
 
 /usr/include/c++/14.1.1/bits/shared_ptr.h:
-
-/usr/include/c++/14.1.1/bits/locale_classes.tcc:
 
 .qt/rcc/qrc_qmake_poker.cpp:
 
@@ -3925,6 +3930,12 @@ apppoker_autogen/EWIEGA46WW/moc_people.cpp:
 
 /usr/include/c++/14.1.1/bits/basic_ios.h:
 
+/usr/include/c++/14.1.1/ext/alloc_traits.h:
+
+/opt/Qt/6.7.1/gcc_64/include/QtCore/qtversionchecks.h:
+
+apppoker_autogen/mocs_compilation.cpp:
+
 /usr/include/wchar.h:
 
 /usr/include/bits/posix1_lim.h:
@@ -3956,12 +3967,6 @@ apppoker_autogen/EWIEGA46WW/moc_people.cpp:
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qnamespace.h:
 
 /usr/include/c++/14.1.1/bits/ostream.tcc:
-
-/opt/Qt/6.7.1/gcc_64/include/QtCore/qtversionchecks.h:
-
-apppoker_autogen/mocs_compilation.cpp:
-
-/usr/include/c++/14.1.1/ext/alloc_traits.h:
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qpointer.h:
 
@@ -4039,12 +4044,6 @@ apppoker_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/14.1.1/atomic:
 
-/usr/include/bits/select.h:
-
-/usr/include/c++/14.1.1/bits/atomic_base.h:
-
-/opt/Qt/6.7.1/gcc_64/include/QtCore/qstringconverter_base.h:
-
 /usr/include/c++/14.1.1/bits/stream_iterator.h:
 
 /usr/include/bits/types/sigset_t.h:
@@ -4068,6 +4067,16 @@ apppoker_autogen/mocs_compilation.cpp:
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qdarwinhelpers.h:
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qmetacontainer.h:
+
+/root/poker/poker/desk.h:
+
+/usr/include/c++/14.1.1/bits/cxxabi_init_exception.h:
+
+/usr/include/c++/14.1.1/bits/fs_path.h:
+
+/usr/include/bits/types/mbstate_t.h:
+
+/usr/include/c++/14.1.1/bits/memory_resource.h:
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qarraydata.h:
 
@@ -4145,6 +4154,14 @@ apppoker_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/14.1.1/bits/stl_construct.h:
 
+/usr/include/bits/select.h:
+
+/opt/Qt/6.7.1/gcc_64/include/QtCore/qstringconverter_base.h:
+
+/usr/include/c++/14.1.1/bits/atomic_base.h:
+
+/usr/include/c++/14.1.1/bits/locale_classes.tcc:
+
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qoverload.h:
 
 /usr/include/c++/14.1.1/bits/atomic_lockfree_defines.h:
@@ -4191,14 +4208,6 @@ apppoker_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/14.1.1/bits/cxxabi_forced.h:
 
-/usr/include/c++/14.1.1/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/14.1.1/bits/fs_path.h:
-
-/usr/include/bits/types/mbstate_t.h:
-
-/usr/include/c++/14.1.1/bits/memory_resource.h:
-
 /usr/include/c++/14.1.1/bits/postypes.h:
 
 /usr/include/c++/14.1.1/bits/erase_if.h:
@@ -4218,8 +4227,6 @@ apppoker_autogen/mocs_compilation.cpp:
 /usr/include/c++/14.1.1/bits/fs_ops.h:
 
 /usr/include/c++/14.1.1/bits/unique_ptr.h:
-
-/usr/include/c++/14.1.1/bits/functional_hash.h:
 
 /usr/include/c++/14.1.1/cctype:
 
@@ -4394,8 +4401,6 @@ apppoker_autogen/mocs_compilation.cpp:
 /usr/include/asm/errno.h:
 
 /usr/include/c++/14.1.1/clocale:
-
-/usr/include/c++/14.1.1/ext/atomicity.h:
 
 /usr/include/c++/14.1.1/cmath:
 
