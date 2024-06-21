@@ -14,6 +14,7 @@ ApplicationWindow {
         id:desk
     }
 
+    property int n: desk.p1GetHandSize()
 
     Rectangle{
         width: 100;height: 100
@@ -22,6 +23,7 @@ ApplicationWindow {
             onTapped: {
                 desk.touchCard()
                 desk.p1output1()
+                n=desk.p1GetHandSize()
             }
         }
     }
@@ -31,23 +33,26 @@ ApplicationWindow {
         spacing: 10
 
         Repeater{
-            model: 20
+            model: n
             delegate: Rectangle{
                 width: 20;height: 20;color: "grey"
                 property bool isRed:false
 
                 Text{
                     anchors.centerIn: parent
-                    text: index+1
+                    text: desk.p1GetCard(index)
                 }
 
                 TapHandler{
                     onTapped: {
-                        p1.select(index+1)
+                        desk.p1select(index+1)
                         parent.color=isRed?"grey":"red"
                         isRed=!isRed
                     }
                 }
+            }
+            onModelChanged: {
+                parent.update()
             }
         }
 
@@ -61,8 +66,9 @@ ApplicationWindow {
 
             TapHandler{
                 onTapped: {
-                    p1.usingCard()
-                    p1.output1()
+                    desk.p1usingCard()
+                    desk.p1output1()
+                    n=desk.p1GetHandSize()
                 }
             }
         }

@@ -2,6 +2,7 @@
 
 #include <QDebug>
 #include <QObject>
+#include <QString>
 #include <algorithm>
 #include <fstream>
 #include <iostream>
@@ -20,27 +21,29 @@ public:
     people();
     struct poker
     {
+        std::string number;
         int num;
         std::string name;
         std::string color;
     };
 
-    //Q_INVOKABLE void touchCard();
     Q_INVOKABLE void output1();
     Q_INVOKABLE void sortHand();
     Q_INVOKABLE void usingCard();
     Q_INVOKABLE void select(int n);
 
-    int outPut(std::vector<poker> tem);
-    int straight(std::vector<poker> tem);
-    int pairs(std::vector<poker> tem);
-    int air1(std::vector<poker> tem);
-    int air2(std::vector<poker> tem);
-    int air3(std::vector<poker> tem);
+    void outPut(std::vector<poker> tem, std::vector<int> &num1);
+    int straight(std::vector<poker> tem, std::vector<int> &num1);
+    int pairs(std::vector<poker> tem, std::vector<int> &num1);
+    int air1(std::vector<poker> tem, std::vector<int> &num1);
+    int air2(std::vector<poker> tem, std::vector<int> &num1);
+    int air3(std::vector<poker> tem, std::vector<int> &num1);
     void setHand(std::vector<poker> Poker);
+    std::vector<poker> getHand();
+
+    std::vector<int> num1;
 
 private:
     std::vector<poker> hand;
-    //std::vector<poker> library;
     std::vector<int> output;
 };

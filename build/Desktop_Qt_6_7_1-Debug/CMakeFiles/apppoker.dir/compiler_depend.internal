@@ -5,6 +5,7 @@ CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o
  /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/mocs_compilation.cpp
  /opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug
  /opt/Qt/6.7.1/gcc_64/include/QtCore/QObject
+ /opt/Qt/6.7.1/gcc_64/include/QtCore/QString
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20functional.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20memory.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20type_traits.h
@@ -1924,6 +1925,7 @@ CMakeFiles/apppoker.dir/desk.cpp.o
  /root/poker/poker/desk.cpp
  /opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug
  /opt/Qt/6.7.1/gcc_64/include/QtCore/QObject
+ /opt/Qt/6.7.1/gcc_64/include/QtCore/QString
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20functional.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20memory.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20type_traits.h
@@ -2387,6 +2389,7 @@ CMakeFiles/apppoker.dir/main.cpp.o
  /root/poker/poker/main.cpp
  /opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug
  /opt/Qt/6.7.1/gcc_64/include/QtCore/QObject
+ /opt/Qt/6.7.1/gcc_64/include/QtCore/QString
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20functional.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20memory.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20type_traits.h
@@ -2904,6 +2907,7 @@ CMakeFiles/apppoker.dir/people.cpp.o
  /root/poker/poker/people.cpp
  /opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug
  /opt/Qt/6.7.1/gcc_64/include/QtCore/QObject
+ /opt/Qt/6.7.1/gcc_64/include/QtCore/QString
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20functional.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20memory.h
  /opt/Qt/6.7.1/gcc_64/include/QtCore/q20type_traits.h
@@ -3361,4 +3365,12 @@ CMakeFiles/apppoker.dir/people.cpp.o
  /usr/lib/clang/17/include/stdbool.h
  /usr/lib/clang/17/include/stddef.h
  /usr/lib/clang/17/include/stdint.h
+
+CMakeFiles/apppoker.dir/qtserver.cpp.o
+ /root/poker/poker/qtserver.cpp
+ /root/poker/poker/qtserver.h
+
+CMakeFiles/apppoker.dir/qtsocket.cpp.o
+ /root/poker/poker/qtsocket.cpp
+ /root/poker/poker/qtsocket.h
 

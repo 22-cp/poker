@@ -12,6 +12,49 @@
                     "access": "public",
                     "name": "p1output1",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "p1select",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "p1usingCard",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "p1GetHandSize",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "p1GetCard",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "num1",
+                            "type": "std::vector<int>"
+                        }
+                    ],
+                    "name": "pushCard",
+                    "returnType": "bool"
                 }
             ],
             "object": true,

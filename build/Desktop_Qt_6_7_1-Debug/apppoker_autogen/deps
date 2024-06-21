@@ -1,6 +1,7 @@
 apppoker_autogen/timestamp: \
 	/opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug \
 	/opt/Qt/6.7.1/gcc_64/include/QtCore/QObject \
+	/opt/Qt/6.7.1/gcc_64/include/QtCore/QString \
 	/opt/Qt/6.7.1/gcc_64/include/QtCore/q20functional.h \
 	/opt/Qt/6.7.1/gcc_64/include/QtCore/q20memory.h \
 	/opt/Qt/6.7.1/gcc_64/include/QtCore/q20type_traits.h \
@@ -901,6 +902,10 @@ apppoker_autogen/timestamp: \
 	/root/poker/poker/main.cpp \
 	/root/poker/poker/people.cpp \
 	/root/poker/poker/people.h \
+	/root/poker/poker/qtserver.cpp \
+	/root/poker/poker/qtserver.h \
+	/root/poker/poker/qtsocket.cpp \
+	/root/poker/poker/qtsocket.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \

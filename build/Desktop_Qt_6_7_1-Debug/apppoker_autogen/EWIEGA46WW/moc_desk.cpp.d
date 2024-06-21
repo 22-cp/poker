@@ -2,6 +2,7 @@
   /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/moc_predefs.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QObject \
+  /opt/Qt/6.7.1/gcc_64/include/QtCore/QString \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/q20functional.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/q20memory.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/q20type_traits.h \

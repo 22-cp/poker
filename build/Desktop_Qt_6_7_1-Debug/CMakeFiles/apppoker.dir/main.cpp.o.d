@@ -451,6 +451,7 @@ CMakeFiles/apppoker.dir/main.cpp.o: /root/poker/poker/main.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/QQmlEngine /root/poker/poker/desk.h \
   /root/poker/poker/people.h /opt/Qt/6.7.1/gcc_64/include/QtCore/QDebug \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QObject \
+  /opt/Qt/6.7.1/gcc_64/include/QtCore/QString \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/fstream \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++io.h \

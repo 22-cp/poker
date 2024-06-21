@@ -401,6 +401,7 @@ CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o: \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qobject.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qobject_impl.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qbindingstorage.h \
+  /opt/Qt/6.7.1/gcc_64/include/QtCore/QString \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/fstream \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.1.1/../../../../include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++io.h \

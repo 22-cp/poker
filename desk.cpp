@@ -2,7 +2,7 @@
 
 desk::desk()
 {
-    std::ifstream file("/root/poker/poker/CardLibrary");
+    std::ifstream file("./poker/CardLibrary");
     if (!file.is_open()) {
         std::cerr << "牌库加载失败!" << endl;
         return;
@@ -11,7 +11,7 @@ desk::desk()
     while (std::getline(file, line)) {
         std::istringstream iss(line);
         people::poker Poker;
-        iss >> Poker.num >> Poker.name >> Poker.color;
+        iss >> Poker.num >> Poker.name >> Poker.number >> Poker.color;
         library.push_back(Poker);
     }
     file.close();
@@ -54,4 +54,54 @@ void desk::touchCard() //从牌库中抽取一张牌加入到手牌
 void desk::p1output1()
 {
     p1->output1();
+}
+
+void desk::p1select(int n)
+{
+    p1->select(n);
+}
+
+void desk::p1usingCard()
+{
+    p1->usingCard();
+}
+
+int desk::p1GetHandSize()
+{
+    std::vector<people::poker> hand1;
+    hand1 = p1->getHand();
+    return hand1.size();
+}
+
+std::vector<int> desk::getNum()
+{
+    return num;
+}
+
+void desk::setNum(std::vector<int> num1)
+{
+    if (num1.empty())
+        return;
+    num.clear();
+    num = num1;
+}
+
+bool desk::pushCard(std::vector<int> num1)
+{
+    if (num.empty())
+        return true;
+    if (num1.empty())
+        return false;
+    if (num1[1] <= num[1] || num1[2] != num[2] || num1[3] != num[3])
+        return false;
+    num = num1;
+    return true;
+}
+
+QString desk::p1GetCard(int n)
+{
+    std::vector<people::poker> hand1;
+    hand1 = p1->getHand();
+    QString str = QString::fromStdString(hand1[n].name);
+    return str;
 }
