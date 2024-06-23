@@ -29,7 +29,7 @@ public:
 
     Q_INVOKABLE void output1();
     Q_INVOKABLE void sortHand();
-    Q_INVOKABLE void usingCard();
+    Q_INVOKABLE void usingCard(std::vector<int> &num);
     Q_INVOKABLE void select(int n);
 
     void outPut(std::vector<poker> tem, std::vector<int> &num1);
@@ -39,6 +39,7 @@ public:
     int air2(std::vector<poker> tem, std::vector<int> &num1);
     int air3(std::vector<poker> tem, std::vector<int> &num1);
     void setHand(std::vector<poker> Poker);
+    bool pushCard(std::vector<int> &num, std::vector<int> num1);
     std::vector<poker> getHand();
 
     std::vector<int> num1;

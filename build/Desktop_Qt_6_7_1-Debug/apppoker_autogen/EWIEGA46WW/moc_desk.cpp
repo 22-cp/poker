@@ -43,10 +43,7 @@ constexpr auto qt_meta_stringdata_CLASSdeskENDCLASS = QtMocHelpers::stringData(
     "n",
     "p1usingCard",
     "p1GetHandSize",
-    "p1GetCard",
-    "pushCard",
-    "std::vector<int>",
-    "num1"
+    "p1GetCard"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -59,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdeskENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -67,13 +64,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdeskENDCLASS[] = {
        0,       // signalCount
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   56,    2, 0x02,    1 /* Public */,
-       3,    0,   57,    2, 0x02,    2 /* Public */,
-       4,    1,   58,    2, 0x02,    3 /* Public */,
-       6,    0,   61,    2, 0x02,    5 /* Public */,
-       7,    0,   62,    2, 0x02,    6 /* Public */,
-       8,    1,   63,    2, 0x02,    7 /* Public */,
-       9,    1,   66,    2, 0x02,    9 /* Public */,
+       1,    0,   50,    2, 0x02,    1 /* Public */,
+       3,    0,   51,    2, 0x02,    2 /* Public */,
+       4,    1,   52,    2, 0x02,    3 /* Public */,
+       6,    0,   55,    2, 0x02,    5 /* Public */,
+       7,    0,   56,    2, 0x02,    6 /* Public */,
+       8,    1,   57,    2, 0x02,    7 /* Public */,
 
  // methods: parameters
     QMetaType::Void,
@@ -82,7 +78,6 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdeskENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Int,
     QMetaType::QString, QMetaType::Int,    5,
-    QMetaType::Bool, 0x80000000 | 10,   11,
 
        0        // eod
 };
@@ -109,10 +104,7 @@ Q_CONSTINIT const QMetaObject desk::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'p1GetCard'
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'pushCard'
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        QtPrivate::TypeAndForceComplete<std::vector<int>, std::false_type>
+        QtPrivate::TypeAndForceComplete<int, std::false_type>
     >,
     nullptr
 } };
@@ -131,8 +123,6 @@ void desk::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         case 5: { QString _r = _t->p1GetCard((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 6: { bool _r = _t->pushCard((*reinterpret_cast< std::add_pointer_t<std::vector<int>>>(_a[1])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -157,13 +147,13 @@ int desk::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 6;
     }
     return _id;
 }

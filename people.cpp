@@ -25,7 +25,21 @@ void people::sortHand() //将手牌排序
     }
 }
 
-void people::usingCard()
+bool people::pushCard(std::vector<int> &num, std::vector<int> num1)
+{
+    if (num.empty()) {
+        num = num1;
+        return true;
+    }
+    if (num1.empty())
+        return false;
+    if (num1[0] != num[0] || num1[1] <= num[1] || num1[2] != num[2])
+        return false;
+    num = num1;
+    return true;
+}
+
+void people::usingCard(std::vector<int> &num)
 {
     num1.clear();
     if (output.size() != 0 && output.size() <= hand.size()) {
@@ -61,10 +75,10 @@ void people::usingCard()
         outPut(tem, num1);
         x = num1[0];
         if (x != 0) {
-            // if (!desk::setNum(num1)) {
-            //     cout << "不符合出牌规则" << endl;
-            //     return;
-            // }
+            if (!pushCard(num, num1)) {
+                cout << "不符合出牌规则" << endl;
+                return;
+            }
             if (x == 1) {
                 cout << tem[0].color << tem[0].name << endl;
             }
@@ -118,11 +132,11 @@ void people::usingCard()
                 hand.erase(hand.begin() + output[i] - 1);
             }
             cout << endl;
+            output.clear();
         } else {
             cout << "不符合出牌规则" << endl;
         }
     }
-    output.clear();
 }
 
 int people::straight(std::vector<people::poker> tem, std::vector<int> &num1)

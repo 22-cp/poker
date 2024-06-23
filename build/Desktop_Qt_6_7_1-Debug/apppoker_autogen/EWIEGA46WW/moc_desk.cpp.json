@@ -44,17 +44,6 @@
                     ],
                     "name": "p1GetCard",
                     "returnType": "QString"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "num1",
-                            "type": "std::vector<int>"
-                        }
-                    ],
-                    "name": "pushCard",
-                    "returnType": "bool"
                 }
             ],
             "object": true,

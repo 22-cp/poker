@@ -63,7 +63,7 @@ void desk::p1select(int n)
 
 void desk::p1usingCard()
 {
-    p1->usingCard();
+    p1->usingCard(num);
 }
 
 int desk::p1GetHandSize()
@@ -84,18 +84,6 @@ void desk::setNum(std::vector<int> num1)
         return;
     num.clear();
     num = num1;
-}
-
-bool desk::pushCard(std::vector<int> num1)
-{
-    if (num.empty())
-        return true;
-    if (num1.empty())
-        return false;
-    if (num1[1] <= num[1] || num1[2] != num[2] || num1[3] != num[3])
-        return false;
-    num = num1;
-    return true;
 }
 
 QString desk::p1GetCard(int n)

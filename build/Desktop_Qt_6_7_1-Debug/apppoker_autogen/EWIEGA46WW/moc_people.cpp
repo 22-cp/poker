@@ -40,6 +40,8 @@ constexpr auto qt_meta_stringdata_CLASSpeopleENDCLASS = QtMocHelpers::stringData
     "",
     "sortHand",
     "usingCard",
+    "std::vector<int>&",
+    "num",
     "select",
     "n"
 );
@@ -64,14 +66,14 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSpeopleENDCLASS[] = {
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   38,    2, 0x02,    1 /* Public */,
        3,    0,   39,    2, 0x02,    2 /* Public */,
-       4,    0,   40,    2, 0x02,    3 /* Public */,
-       5,    1,   41,    2, 0x02,    4 /* Public */,
+       4,    1,   40,    2, 0x02,    3 /* Public */,
+       7,    1,   43,    2, 0x02,    5 /* Public */,
 
  // methods: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void, 0x80000000 | 5,    6,
+    QMetaType::Void, QMetaType::Int,    8,
 
        0        // eod
 };
@@ -91,6 +93,7 @@ Q_CONSTINIT const QMetaObject people::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'usingCard'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<std::vector<int> &, std::false_type>,
         // method 'select'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
@@ -106,7 +109,7 @@ void people::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         switch (_id) {
         case 0: _t->output1(); break;
         case 1: _t->sortHand(); break;
-        case 2: _t->usingCard(); break;
+        case 2: _t->usingCard((*reinterpret_cast< std::add_pointer_t<std::vector<int>&>>(_a[1]))); break;
         case 3: _t->select((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }

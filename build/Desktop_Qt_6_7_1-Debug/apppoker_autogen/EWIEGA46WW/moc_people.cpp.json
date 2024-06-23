@@ -15,6 +15,12 @@
                 },
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "name": "num",
+                            "type": "std::vector<int>&"
+                        }
+                    ],
                     "name": "usingCard",
                     "returnType": "void"
                 },
