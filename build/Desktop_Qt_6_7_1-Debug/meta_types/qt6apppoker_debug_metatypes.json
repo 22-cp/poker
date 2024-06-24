@@ -6,45 +6,44 @@
                 "methods": [
                     {
                         "access": "public",
+                        "arguments": [
+                            {
+                                "name": "num1",
+                                "type": "std::vector<int>"
+                            }
+                        ],
+                        "name": "setNum",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "getNum",
+                        "returnType": "std::vector<int>"
+                    },
+                    {
+                        "access": "public",
+                        "name": "getNumRef",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
                         "name": "touchCard",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "name": "p1output1",
-                        "returnType": "void"
+                        "name": "getP1Hand",
+                        "returnType": "std::vector<people::poker>"
                     },
                     {
                         "access": "public",
-                        "arguments": [
-                            {
-                                "name": "n",
-                                "type": "int"
-                            }
-                        ],
-                        "name": "p1select",
-                        "returnType": "void"
+                        "name": "getP2Hand",
+                        "returnType": "std::vector<people::poker>"
                     },
                     {
                         "access": "public",
-                        "name": "p1usingCard",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "public",
-                        "name": "p1GetHandSize",
-                        "returnType": "int"
-                    },
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "n",
-                                "type": "int"
-                            }
-                        ],
-                        "name": "p1GetCard",
-                        "returnType": "QString"
+                        "name": "getP3Hand",
+                        "returnType": "std::vector<people::poker>"
                     }
                 ],
                 "object": true,
@@ -80,7 +79,7 @@
                         "arguments": [
                             {
                                 "name": "num",
-                                "type": "std::vector<int>&"
+                                "type": "std::vector<int>"
                             }
                         ],
                         "name": "usingCard",
@@ -96,6 +95,81 @@
                         ],
                         "name": "select",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "Poker",
+                                "type": "std::vector<poker>"
+                            }
+                        ],
+                        "name": "setHand",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "n",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "getCardName",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "n",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setRef",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "getRef",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "name": "getHandSize",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "name": "getNum1",
+                        "returnType": "std::vector<int>"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "num",
+                                "type": "std::vector<int>"
+                            }
+                        ],
+                        "name": "pushCard",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "s",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "setPlayCard",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "getPlayCard",
+                        "returnType": "bool"
                     }
                 ],
                 "object": true,

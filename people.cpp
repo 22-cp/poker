@@ -18,6 +18,11 @@ void people::setRef(int n)
     ref = n;
 }
 
+int people::getRef()
+{
+    return ref;
+}
+
 void people::sortHand() //将手牌排序
 {
     int n = hand.size();
@@ -30,25 +35,34 @@ void people::sortHand() //将手牌排序
     }
 }
 
-bool people::pushCard(std::vector<int> &num, std::vector<int> num1)
+void people::setPlayCard(bool s)
 {
-    if (num.empty()) {
-        num = num1;
+    playCard = s;
+}
+
+bool people::getPlayCard()
+{
+    return playCard;
+}
+
+bool people::pushCard(std::vector<int> num)
+{
+    if (num.empty())
         return true;
-    }
+
     if (num1.empty())
         return false;
-    if (num[3] == num1[3]) {
-        num = num1;
+
+    if (num[0] == num1[0])
         return true;
-    }
-    if (num1[0] != num[0] || num1[1] <= num[1] || num1[2] != num[2])
+
+    if (num1[1] != num[1] || num1[2] <= num[2] || num1[3] != num[3])
         return false;
-    num = num1;
+
     return true;
 }
 
-void people::usingCard(std::vector<int> &num)
+void people::usingCard(std::vector<int> num)
 {
     num1.clear();
     if (output.size() != 0 && output.size() <= hand.size()) {
@@ -81,10 +95,10 @@ void people::usingCard(std::vector<int> &num)
             tem.push_back(hand[output[i] - 1]);
         }
         int x;
-        outPut(tem, num1);
-        x = num1[0];
+        outPut(tem);
+        x = num1[1];
         if (x != 0) {
-            if (!pushCard(num, num1)) {
+            if (!pushCard(num)) {
                 cout << "不符合出牌规则" << endl;
                 return;
             }
@@ -148,7 +162,12 @@ void people::usingCard(std::vector<int> &num)
     }
 }
 
-int people::straight(std::vector<people::poker> tem, std::vector<int> &num1)
+std::vector<int> people::getNum1()
+{
+    return num1;
+}
+
+int people::straight(std::vector<people::poker> tem)
 {
     num1.clear();
     if (tem[tem.size() - 1].num > 12) {
@@ -167,7 +186,7 @@ int people::straight(std::vector<people::poker> tem, std::vector<int> &num1)
     num1.push_back(ref);
     return x;
 }
-int people::pairs(std::vector<people::poker> tem, std::vector<int> &num1)
+int people::pairs(std::vector<people::poker> tem)
 {
     num1.clear();
     if (tem[tem.size() - 1].num > 12) {
@@ -186,7 +205,7 @@ int people::pairs(std::vector<people::poker> tem, std::vector<int> &num1)
     num1.push_back(ref);
     return x;
 }
-int people::air1(std::vector<people::poker> tem, std::vector<int> &num1)
+int people::air1(std::vector<people::poker> tem)
 {
     num1.clear();
     if (tem[tem.size() - 1].num > 12) {
@@ -209,7 +228,7 @@ int people::air1(std::vector<people::poker> tem, std::vector<int> &num1)
     num1.push_back(ref);
     return x;
 }
-int people::air2(std::vector<people::poker> tem, std::vector<int> &num1)
+int people::air2(std::vector<people::poker> tem)
 {
     num1.clear();
     int x = 0;
@@ -232,7 +251,7 @@ int people::air2(std::vector<people::poker> tem, std::vector<int> &num1)
     num1.push_back(ref);
     return x;
 }
-int people::air3(std::vector<people::poker> tem, std::vector<int> &num1)
+int people::air3(std::vector<people::poker> tem)
 {
     num1.clear();
     int x = 0;
@@ -257,7 +276,7 @@ int people::air3(std::vector<people::poker> tem, std::vector<int> &num1)
     num1.push_back(ref);
     return x;
 }
-void people::outPut(std::vector<people::poker> tem, std::vector<int> &num1)
+void people::outPut(std::vector<people::poker> tem)
 {
     if (tem.size() == 1) {
         num1.push_back(1);
@@ -327,15 +346,15 @@ void people::outPut(std::vector<people::poker> tem, std::vector<int> &num1)
             num1.push_back(0);
             return;
         }
-        int x = straight(tem, num1);
+        int x = straight(tem);
         if (x)
             return;
 
-        x = pairs(tem, num1);
+        x = pairs(tem);
         if (x)
             return;
 
-        x = air1(tem, num1);
+        x = air1(tem);
         if (x == tem.size() / 3)
             return;
     } else if (tem.size() == 7 || tem.size() == 11) {
@@ -344,97 +363,97 @@ void people::outPut(std::vector<people::poker> tem, std::vector<int> &num1)
             num1.push_back(0);
             return;
         }
-        int x = straight(tem, num1);
+        int x = straight(tem);
         if (x)
             return;
     } else if (tem.size() == 8) {
         num1.clear();
-        int x = straight(tem, num1);
+        int x = straight(tem);
         if (x)
             return;
 
-        x = pairs(tem, num1);
+        x = pairs(tem);
         if (x)
             return;
 
-        x = air2(tem, num1);
+        x = air2(tem);
         if (x == tem.size() / 4)
             return; //飞机带单
 
     } else if (tem.size() == 9) {
-        int x = straight(tem, num1);
+        int x = straight(tem);
         if (x)
             return;
 
-        x = air1(tem, num1);
+        x = air1(tem);
         if (x == tem.size() / 3)
             return;
     } else if (tem.size() == 10) {
-        int x = straight(tem, num1);
+        int x = straight(tem);
         if (x)
             return;
 
-        x = pairs(tem, num1);
+        x = pairs(tem);
         if (x)
             return;
 
-        x = air3(tem, num1);
+        x = air3(tem);
         if (x == tem.size() / 5)
             return; //飞机带对
     } else if (tem.size() == 12) {
-        int x = straight(tem, num1);
+        int x = straight(tem);
         if (x)
             return;
 
-        x = pairs(tem, num1);
+        x = pairs(tem);
         if (x)
             return;
 
-        x = air1(tem, num1);
+        x = air1(tem);
         if (x == tem.size() / 3)
             return;
 
-        x = air2(tem, num1);
+        x = air2(tem);
         if (x == tem.size() / 4)
             return; //飞机带单
     } else if (tem.size() == 14) {
-        int x = pairs(tem, num1);
+        int x = pairs(tem);
         if (x)
             return;
     } else if (tem.size() == 15) {
-        int x = air1(tem, num1);
+        int x = air1(tem);
         if (x == tem.size() / 3)
             return; //飞机不带
 
-        x = air3(tem, num1);
+        x = air3(tem);
         if (x == tem.size() / 5)
             return; //飞机带对
     } else if (tem.size() == 16) {
-        int x = pairs(tem, num1);
+        int x = pairs(tem);
         if (x)
             return;
 
-        x = air2(tem, num1);
+        x = air2(tem);
         if (x == tem.size() / 4)
             return; //飞机带单
     } else if (tem.size() == 18) {
-        int x = pairs(tem, num1);
+        int x = pairs(tem);
         if (x)
             return;
 
-        x = air1(tem, num1);
+        x = air1(tem);
         if (x == tem.size() / 3)
             return;
     } else if (tem.size() == 20) {
-        int x = pairs(tem, num1);
+        int x = pairs(tem);
         if (x)
             return;
 
-        x = air2(tem, num1);
+        x = air2(tem);
         if (x == tem.size() / 4)
             return; //飞机带单
 
-        x = air3(tem, num1);
+        x = air3(tem);
         if (x == tem.size() / 5)
             return; //飞机带对
     }
@@ -453,6 +472,18 @@ void people::setHand(std::vector<poker> Poker)
         return;
     hand.clear();
     hand = Poker;
+}
+
+QString people::getCardName(int n)
+{
+    QString name;
+    name = QString::fromStdString(hand[n].name);
+    return name;
+}
+
+int people::getHandSize()
+{
+    return hand.size();
 }
 
 std::vector<people::poker> people::getHand()

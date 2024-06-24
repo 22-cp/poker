@@ -19,20 +19,18 @@ desk::desk()
     std::random_device rd;
     std::mt19937 g(rd());
     std::shuffle(library.begin(), library.end(), g);
+}
 
-    p1 = new people;
-    p1->setRef(1);
-    p2 = new people;
-    p2->setRef(2);
-    p3 = new people;
-    p3->setRef(3);
+int desk::getNumRef()
+{
+    if (!num.empty())
+        return num[0];
+    else
+        return 0;
 }
 
 void desk::touchCard() //从牌库中抽取一张牌加入到手牌
 {
-    std::vector<people::poker> p1Hand;
-    std::vector<people::poker> p2Hand;
-    std::vector<people::poker> p3Hand;
     for (int i = 0; i < 17; i++) {
         if (library.begin() == library.end()) {
             cout << "No poker in it." << endl;
@@ -46,36 +44,7 @@ void desk::touchCard() //从牌库中抽取一张牌加入到手牌
         p3Hand.push_back(*c);
         library.erase(library.begin());
     }
-    p1->setHand(p1Hand);
-    p1->sortHand();
-    p2->setHand(p2Hand);
-    p2->sortHand();
-    p3->setHand(p3Hand);
-    p3->sortHand();
 }
-
-void desk::p1output1()
-{
-    p1->output1();
-}
-
-void desk::p1select(int n)
-{
-    p1->select(n);
-}
-
-void desk::p1usingCard()
-{
-    p1->usingCard(num);
-}
-
-int desk::p1GetHandSize() //返回p1的手牌数
-{
-    std::vector<people::poker> hand1;
-    hand1 = p1->getHand();
-    return hand1.size();
-}
-
 std::vector<int> desk::getNum()
 {
     return num;
@@ -88,11 +57,15 @@ void desk::setNum(std::vector<int> num1)
     num.clear();
     num = num1;
 }
-
-QString desk::p1GetCard(int n) //返回p1手牌中第n张牌的牌名
+std::vector<people::poker> desk::getP1Hand()
 {
-    std::vector<people::poker> hand1;
-    hand1 = p1->getHand();
-    QString str = QString::fromStdString(hand1[n].name);
-    return str;
+    return p1Hand;
+}
+std::vector<people::poker> desk::getP2Hand()
+{
+    return p2Hand;
+}
+std::vector<people::poker> desk::getP3Hand()
+{
+    return p3Hand;
 }

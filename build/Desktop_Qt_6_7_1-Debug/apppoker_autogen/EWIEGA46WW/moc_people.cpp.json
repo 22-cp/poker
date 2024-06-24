@@ -18,7 +18,7 @@
                     "arguments": [
                         {
                             "name": "num",
-                            "type": "std::vector<int>&"
+                            "type": "std::vector<int>"
                         }
                     ],
                     "name": "usingCard",
@@ -34,6 +34,81 @@
                     ],
                     "name": "select",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "Poker",
+                            "type": "std::vector<poker>"
+                        }
+                    ],
+                    "name": "setHand",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "getCardName",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setRef",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getRef",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "getHandSize",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "getNum1",
+                    "returnType": "std::vector<int>"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "num",
+                            "type": "std::vector<int>"
+                        }
+                    ],
+                    "name": "pushCard",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "s",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "setPlayCard",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getPlayCard",
+                    "returnType": "bool"
                 }
             ],
             "object": true,
