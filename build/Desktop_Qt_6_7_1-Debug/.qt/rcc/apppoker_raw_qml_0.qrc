@@ -1,7 +1,0 @@
-<RCC>
-  <qresource prefix="/poker/">
-    <file alias="Main.qml">/root/poker/poker/Main.qml</file>
-    <file alias="CardLibrary">/root/poker/poker/CardLibrary</file>
-  </qresource>
-</RCC>
-
