@@ -21,8 +21,11 @@ desk::desk()
     std::shuffle(library.begin(), library.end(), g);
 
     p1 = new people;
+    p1->setRef(1);
     p2 = new people;
+    p2->setRef(2);
     p3 = new people;
+    p3->setRef(3);
 }
 
 void desk::touchCard() //从牌库中抽取一张牌加入到手牌
@@ -66,7 +69,7 @@ void desk::p1usingCard()
     p1->usingCard(num);
 }
 
-int desk::p1GetHandSize()
+int desk::p1GetHandSize() //返回p1的手牌数
 {
     std::vector<people::poker> hand1;
     hand1 = p1->getHand();
@@ -86,7 +89,7 @@ void desk::setNum(std::vector<int> num1)
     num = num1;
 }
 
-QString desk::p1GetCard(int n)
+QString desk::p1GetCard(int n) //返回p1手牌中第n张牌的牌名
 {
     std::vector<people::poker> hand1;
     hand1 = p1->getHand();

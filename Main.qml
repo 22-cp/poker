@@ -28,8 +28,42 @@ ApplicationWindow {
         }
     }
 
+    Column{
+        anchors.centerIn:parent
+        spacing: 10
+        Row{
+            spacing: 10
+
+            Rectangle{
+                width: 20;height: 20;color: "grey"
+
+                Text{
+                    anchors.centerIn:parent
+                    text:qsTr("不出")
+                }
+
+            }
+
+            Rectangle{
+                width: 20;height: 20;color: "grey"
+
+                Text{
+                    anchors.centerIn:parent
+                    text:qsTr("出牌")
+                }
+
+                TapHandler{
+                    onTapped: {
+                        desk.p1usingCard()
+                        desk.p1output1()
+                        n=desk.p1GetHandSize()
+                    }
+                }
+            }
+
+        }
+
     Row{
-        anchors.centerIn: parent;
         spacing: 10
 
         Repeater{
@@ -55,22 +89,6 @@ ApplicationWindow {
                 parent.update()
             }
         }
-
-        Rectangle{
-            width: 20;height: 20;color: "grey"
-
-            Text{
-                anchors.centerIn:parent
-                text:qsTr("出牌")
-            }
-
-            TapHandler{
-                onTapped: {
-                    desk.p1usingCard()
-                    desk.p1output1()
-                    n=desk.p1GetHandSize()
-                }
-            }
-        }
+    }
     }
 }

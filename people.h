@@ -40,11 +40,12 @@ public:
     int air3(std::vector<poker> tem, std::vector<int> &num1);
     void setHand(std::vector<poker> Poker);
     bool pushCard(std::vector<int> &num, std::vector<int> num1);
+    void setRef(int n);
     std::vector<poker> getHand();
 
-    std::vector<int> num1;
-
 private:
+    std::vector<int> num1;
     std::vector<poker> hand;
     std::vector<int> output;
+    int ref;
 };

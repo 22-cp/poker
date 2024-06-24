@@ -18,8 +18,9 @@ public:
     Q_INVOKABLE QString p1GetCard(int n);
 
 private:
-    std::vector<int> num; //第一位存牌型，第二位存最大值，第三位存张数
+    std::vector<int> num; //第一位存牌型，第二位存最大值，第三位存张数，第四位存谁出的牌
     std::vector<people::poker> library;
+
     people *p1;
     people *p2;
     people *p3;
