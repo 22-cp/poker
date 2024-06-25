@@ -59,22 +59,6 @@
                 },
                 {
                     "access": "public",
-                    "arguments": [
-                        {
-                            "name": "n",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "setRef",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "name": "getRef",
-                    "returnType": "int"
-                },
-                {
-                    "access": "public",
                     "name": "getHandSize",
                     "returnType": "int"
                 },
@@ -112,7 +96,63 @@
                 }
             ],
             "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "ref",
+                    "notify": "refChanged",
+                    "read": "getRef",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setRef"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 1,
+                    "name": "playCard",
+                    "notify": "playCardChanged",
+                    "read": "getPlayCard",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false,
+                    "write": "setPlayCard"
+                }
+            ],
             "qualifiedClassName": "people",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "refChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "playCardChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "onRefChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onPlayCardChanged",
+                    "returnType": "void"
+                }
+            ],
             "superClasses": [
                 {
                     "access": "public",

@@ -5,28 +5,12 @@
             "methods": [
                 {
                     "access": "public",
-                    "arguments": [
-                        {
-                            "name": "num1",
-                            "type": "std::vector<int>"
-                        }
-                    ],
-                    "name": "setNum",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "name": "getNum",
-                    "returnType": "std::vector<int>"
-                },
-                {
-                    "access": "public",
                     "name": "getNumRef",
                     "returnType": "int"
                 },
                 {
                     "access": "public",
-                    "name": "touchCard",
+                    "name": "dealCard",
                     "returnType": "void"
                 },
                 {
@@ -43,10 +27,126 @@
                     "access": "public",
                     "name": "getP3Hand",
                     "returnType": "std::vector<people::poker>"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "ref",
+                            "type": "int"
+                        },
+                        {
+                            "name": "mark",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setLandlords",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getLandlords",
+                    "returnType": "std::vector<int>"
+                },
+                {
+                    "access": "public",
+                    "name": "getLandlord",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "getNowPlay",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "getNum",
+                    "returnType": "std::vector<int>"
                 }
             ],
             "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "nowPlay",
+                    "notify": "nowPlayChanged",
+                    "read": "getNowPlay",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setNowPlay"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 1,
+                    "name": "num",
+                    "notify": "numChanged",
+                    "read": "getNum",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "std::vector<int>",
+                    "user": false,
+                    "write": "setNum"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 2,
+                    "name": "landlord",
+                    "notify": "landlordChanged",
+                    "read": "getLandlord",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setLandlord"
+                }
+            ],
             "qualifiedClassName": "desk",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "nowPlayChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "numChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "landlordChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "onNowPlayChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onNumChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onLandlordChanged",
+                    "returnType": "void"
+                }
+            ],
             "superClasses": [
                 {
                     "access": "public",

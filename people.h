@@ -17,6 +17,10 @@ using std::endl;
 class people : public QObject
 {
     Q_OBJECT
+
+    Q_PROPERTY(int ref READ getRef WRITE setRef NOTIFY refChanged FINAL)
+    Q_PROPERTY(bool playCard READ getPlayCard WRITE setPlayCard NOTIFY playCardChanged FINAL)
+
 public:
     people();
     struct poker
@@ -33,11 +37,10 @@ public:
     Q_INVOKABLE void select(int n);
     Q_INVOKABLE void setHand(std::vector<poker> Poker);
     Q_INVOKABLE QString getCardName(int n);
-    Q_INVOKABLE void setRef(int n);
-    Q_INVOKABLE int getRef();
     Q_INVOKABLE int getHandSize();
     Q_INVOKABLE std::vector<int> getNum1();
     Q_INVOKABLE bool pushCard(std::vector<int> num);
+
     Q_INVOKABLE void setPlayCard(bool s);
     Q_INVOKABLE bool getPlayCard();
 
@@ -49,6 +52,17 @@ public:
     int air3(std::vector<poker> tem);
 
     std::vector<poker> getHand();
+
+    void setRef(int n);
+    int getRef();
+
+signals:
+    void refChanged();
+    void playCardChanged();
+
+public slots:
+    void onRefChanged();
+    void onPlayCardChanged();
 
 private:
     std::vector<int> num1;

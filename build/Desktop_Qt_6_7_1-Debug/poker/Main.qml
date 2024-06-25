@@ -12,6 +12,9 @@ ApplicationWindow {
 
     Desk{
         id:desk
+        onNowPlayChanged: {
+            p1b.visible=true
+        }
     }
 
     People{
@@ -35,22 +38,23 @@ ApplicationWindow {
         color: "red"
         TapHandler{
             onTapped: {
-                desk.touchCard()
+                desk.dealCard()
                 p1.setHand(desk.getP1Hand())
                 p1.sortHand()
                 p1.setPlayCard(true)
-                p1.setRef(1)
+                p1.ref=1
                 p2.setHand(desk.getP2Hand())
                 p2.sortHand()
                 p2.setPlayCard(false)
-                p2.setRef(2)
+                p2.ref=2
                 p3.setHand(desk.getP3Hand())
                 p3.sortHand()
                 p3.setPlayCard(false)
-                p3.setRef(3)
+                p3.ref=3
                 n1=p1.getHandSize()
                 n2=p2.getHandSize()
                 n3=p3.getHandSize()
+                desk.nowPlay=1
                 parent.visible=false
             }
         }
@@ -63,6 +67,8 @@ ApplicationWindow {
         spacing: 10
         Row{
             spacing: 10
+            id:p1b
+            visible: false
 
             Rectangle{
                 width: 20;height: 20;color: "grey"
@@ -73,7 +79,7 @@ ApplicationWindow {
 
                     TapHandler{
                         onTapped: {
-                            if(desk.getNumRef()!==0&&desk.getNumRef()!==p1.getRef()){
+                            if(desk.getNumRef()!==0&&desk.getNumRef()!==p1.ref){
                             p1.setPlayCard(false)
                             p2.setPlayCard(true)
                             }
@@ -81,6 +87,7 @@ ApplicationWindow {
                                 console.log("当前该你出牌！")
                             }
                         }
+                        enabled: false
                     }
                 }
 
@@ -99,7 +106,7 @@ ApplicationWindow {
                         if(p1.getPlayCard()){
                         p1.usingCard(desk.getNum())
                         if(p1.pushCard(desk.getNum())){
-                            desk.setNum(p1.getNum1())
+                            desk.num=p1.getNum1()
                             p1.setPlayCard(false)
                             p2.setPlayCard(true)
                             n1=p1.getHandSize()
@@ -153,7 +160,7 @@ ApplicationWindow {
 
                     TapHandler{
                         onTapped: {
-                            if(desk.getNumRef()!==0&&desk.getNumRef()!==p2.getRef()){
+                            if(desk.getNumRef()!==0&&desk.getNumRef()!==p2.ref){
                             p2.setPlayCard(false)
                             p3.setPlayCard(true)
                             }
@@ -179,7 +186,7 @@ ApplicationWindow {
                         if(p2.getPlayCard()){
                         p2.usingCard(desk.getNum())
                         if(p2.pushCard(desk.getNum())){
-                            desk.setNum(p2.getNum1())
+                            desk.num=p2.getNum1()
                             p2.setPlayCard(false)
                             p3.setPlayCard(true)
                             n2=p2.getHandSize()
@@ -233,7 +240,7 @@ ApplicationWindow {
 
                     TapHandler{
                         onTapped: {
-                            if(desk.getNumRef()!==0&&desk.getNumRef()!==p3.getRef()){
+                            if(desk.getNumRef()!==0&&desk.getNumRef()!==p3.ref){
                             p3.setPlayCard(false)
                             p1.setPlayCard(true)
                             }
@@ -259,7 +266,7 @@ ApplicationWindow {
                         if(p3.getPlayCard()){
                         p3.usingCard(desk.getNum())
                         if(p3.pushCard(desk.getNum())){
-                            desk.setNum(p3.getNum1())
+                            desk.num=p3.getNum1()
                             p3.setPlayCard(false)
                             p1.setPlayCard(true)
                             n3=p3.getHandSize()

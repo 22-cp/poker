@@ -19,6 +19,21 @@ desk::desk()
     std::random_device rd;
     std::mt19937 g(rd());
     std::shuffle(library.begin(), library.end(), g);
+
+    nowPlay = 0;
+}
+
+void desk::onNowPlayChanged() {}
+
+void desk::setNowPlay(int n)
+{
+    nowPlay = n;
+    emit nowPlayChanged();
+}
+
+int desk::getNowPlay()
+{
+    return nowPlay;
 }
 
 int desk::getNumRef()
@@ -29,7 +44,7 @@ int desk::getNumRef()
         return 0;
 }
 
-void desk::touchCard() //从牌库中抽取一张牌加入到手牌
+void desk::dealCard() //从牌库中抽取一张牌加入到手牌
 {
     for (int i = 0; i < 17; i++) {
         if (library.begin() == library.end()) {
@@ -56,7 +71,36 @@ void desk::setNum(std::vector<int> num1)
         return;
     num.clear();
     num = num1;
+
+    emit numChanged();
 }
+
+void desk::onNumChanged() {}
+
+std::vector<int> desk::getLandlords()
+{
+    return landlords;
+}
+
+void desk::setLandlords(int ref, int mark)
+{
+    landlords.push_back(ref);
+    landlords.push_back(mark);
+}
+
+void desk::setLandlord(int ref)
+{
+    landlord = ref;
+    emit landlordChanged();
+}
+
+int desk::getLandlord()
+{
+    return landlord;
+}
+
+void desk::onLandlordChanged() {}
+
 std::vector<people::poker> desk::getP1Hand()
 {
     return p1Hand;
