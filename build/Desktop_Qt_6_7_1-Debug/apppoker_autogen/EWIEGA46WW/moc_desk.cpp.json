@@ -30,38 +30,24 @@
                 },
                 {
                     "access": "public",
-                    "arguments": [
-                        {
-                            "name": "ref",
-                            "type": "int"
-                        },
-                        {
-                            "name": "mark",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "setLandlords",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "name": "getLandlords",
-                    "returnType": "std::vector<int>"
-                },
-                {
-                    "access": "public",
-                    "name": "getLandlord",
-                    "returnType": "int"
-                },
-                {
-                    "access": "public",
-                    "name": "getNowPlay",
-                    "returnType": "int"
+                    "name": "getLandlordHand",
+                    "returnType": "std::vector<people::poker>"
                 },
                 {
                     "access": "public",
                     "name": "getNum",
                     "returnType": "std::vector<int>"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setAlready",
+                    "returnType": "void"
                 }
             ],
             "object": true,
@@ -110,6 +96,51 @@
                     "type": "int",
                     "user": false,
                     "write": "setLandlord"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 3,
+                    "name": "already",
+                    "notify": "alreadyChanged",
+                    "read": "getAlready",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setAlready"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 4,
+                    "name": "temLandlord",
+                    "notify": "temLandlordChanged",
+                    "read": "getTemLandlord",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setTemLandlord"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 5,
+                    "name": "mark",
+                    "notify": "markChanged",
+                    "read": "getMark",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setMark"
                 }
             ],
             "qualifiedClassName": "desk",
@@ -128,6 +159,21 @@
                     "access": "public",
                     "name": "landlordChanged",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "alreadyChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "temLandlordChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "markChanged",
+                    "returnType": "void"
                 }
             ],
             "slots": [
@@ -144,6 +190,21 @@
                 {
                     "access": "public",
                     "name": "onLandlordChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onAlreadyChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onTemLandlordChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onMarkChanged",
                     "returnType": "void"
                 }
             ],

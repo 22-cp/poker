@@ -13,56 +13,77 @@ ApplicationWindow {
     Desk{
         id:desk
         onNowPlayChanged: {
-            p1b.visible=true
+            if(nowPlayChanged()===1){
+                p1b.visible=true
+                p2b.visible=false
+                p3b.visible=false
+            }
+            else if(nowPlayChanged()===2){
+                p2b.visible=true
+                p1b.visible=false
+                p3b.visible=false
+            }
+            else{
+                p3b.visible=true
+                p2b.visible=false
+                p1b.visible=false
+            }
+        }
+        onAlreadyChanged: {
+            if(desk.already===3){
+                desk.dealCard()
+                p1.setHand(desk.getP1Hand())
+                p1.sortHand()
+                p2.setHand(desk.getP2Hand())
+                p2.sortHand()
+                p3.setHand(desk.getP3Hand())
+                p3.sortHand()
+                p1c.visible=false
+                p2c.visible=false
+                p3c.visible=false
+                p1a.visible=true
+                //p2a.visible=true
+                //p3a.visible=true
+                n1=p1.getHandSize()
+                n2=p2.getHandSize()
+                n3=p3.getHandSize()
+            }
+        }
+        onMarkChanged: {
+            if(tem==2){
+                for(var i=0;i<mark;i++){
+                    p2mark.children[i].enabled=false
+                }
+            }
         }
     }
 
     People{
         id:p1
+        ref: 1
     }
 
     People{
         id:p2
+        ref:2
     }
 
     People{
         id:p3
+        ref:3
     }
 
+    property int tem: 1
     property int n1: p1.getHandSize()
     property int n2: p2.getHandSize()
     property int n3: p3.getHandSize()
 
-    Rectangle{
-        width: 100;height: 100
-        color: "red"
-        TapHandler{
-            onTapped: {
-                desk.dealCard()
-                p1.setHand(desk.getP1Hand())
-                p1.sortHand()
-                p1.setPlayCard(true)
-                p1.ref=1
-                p2.setHand(desk.getP2Hand())
-                p2.sortHand()
-                p2.setPlayCard(false)
-                p2.ref=2
-                p3.setHand(desk.getP3Hand())
-                p3.sortHand()
-                p3.setPlayCard(false)
-                p3.ref=3
-                n1=p1.getHandSize()
-                n2=p2.getHandSize()
-                n3=p3.getHandSize()
-                desk.nowPlay=1
-                parent.visible=false
-            }
-        }
-    }
+
 
     Column{
         anchors.centerIn: parent
         spacing: 40
+
     Column{
         spacing: 10
         Row{
@@ -87,7 +108,7 @@ ApplicationWindow {
                                 console.log("当前该你出牌！")
                             }
                         }
-                        enabled: false
+                        //enabled: false
                     }
                 }
 
@@ -116,6 +137,67 @@ ApplicationWindow {
                 }
             }
 
+        }
+
+        Row{
+            id:p1a
+            spacing: 10
+            visible: false
+            Rectangle{
+                width: 20;height: 20;color: "grey"
+                Text {
+                    anchors.centerIn: parent
+                    text: qsTr("不叫") 
+                }
+                TapHandler{
+                    onTapped: {
+                        desk.temLandlord=p1.ref;
+                        p1a.visible=false
+                        p2a.visible=true
+                        tem++
+                        desk.mark=0;
+                    }
+                }
+            }
+
+            Repeater{
+                model:3
+                delegate: Rectangle{
+                    width: 20;height: 20;color: "grey"
+                    Text{
+                        anchors.centerIn: parent
+                        text: index+1+"分"
+                    }
+                    TapHandler{
+                        onTapped: {
+                            desk.temLandlord=p1.ref
+                            p1a.visible=false
+                            p2a.visible=true
+                            tem++
+                            desk.mark=index+1
+                        }
+                    }
+                }
+            }
+        }
+
+        Rectangle{
+            id:p1c
+            width: 120;height: 50;color: "#FFFF00"
+            radius: 10
+            Text {
+                anchors.centerIn: parent
+                color: "red"
+                text: qsTr("开始游戏")
+                font.pointSize: 20
+            }
+            TapHandler{
+                onTapped: {
+                    parent.color="grey"
+                    desk.setAlready(1)
+                    enabled=false
+                }
+            }
         }
 
     Row{
@@ -149,7 +231,9 @@ ApplicationWindow {
     Column{
         spacing: 10
         Row{
+            id:p2b
             spacing: 10
+            visible: false
 
             Rectangle{
                 width: 20;height: 20;color: "grey"
@@ -197,7 +281,63 @@ ApplicationWindow {
             }
 
         }
+        Row{
+            id:p2a
+            spacing: 10
+            visible: false
+            Rectangle{
+                width: 20;height: 20;color: "grey"
+                Text {
+                    anchors.centerIn: parent
+                    text: qsTr("不叫")
+                    TapHandler{
+                        onTapped: {
+                            p2a.visible=false
+                            p3a.visible=true
+                        }
+                    }
+                }
+            }
 
+            Repeater{
+                id:p2mark
+                model:3
+                delegate: Rectangle{
+                    width: 20;height: 20;color: "blue"
+                    Text{
+                        anchors.centerIn: parent
+                        text: index+1+"分"
+                    }
+                    TapHandler{
+                        onTapped: {
+                            if(index>desk.getLandlords2())
+                            desk.setLandlords(p2.ref,index+1)
+                            p2a.visible=false
+                            p3a.visible=true
+                        }
+                    }
+                }
+            }
+        }
+
+        Rectangle{
+            id:p2c
+            width: 120;height: 50;color: "#FFFF00"
+            radius: 10
+            Text {
+                anchors.centerIn: parent
+                color: "red"
+                text: qsTr("开始游戏")
+                font.pointSize: 20
+            }
+            TapHandler{
+                onTapped: {
+                    parent.color="grey"
+                    desk.setAlready(1)
+                    enabled=false
+                }
+            }
+        }
     Row{
         spacing: 10
 
@@ -229,8 +369,9 @@ ApplicationWindow {
     Column{
         spacing: 10
         Row{
+            id:p3b
             spacing: 10
-
+            visible: false
             Rectangle{
                 width: 20;height: 20;color: "grey"
 
@@ -278,6 +419,64 @@ ApplicationWindow {
 
         }
 
+        Row{
+            id:p3a
+            spacing: 10
+            visible: false
+            Rectangle{
+                width: 20;height: 20;color: "grey"
+                Text {
+                    anchors.centerIn: parent
+                    text: qsTr("不叫")
+
+                }
+                TapHandler{
+                    onTapped: {
+                        desk.setLandlords(p3.ref,0)
+                        p3a.visible=false
+                        desk.landlord=desk.getLandlords()
+                    }
+                }
+            }
+
+            Repeater{
+                model:3
+                delegate: Rectangle{
+                    width: 20;height: 20;color: "grey"
+                    Text{
+                        anchors.centerIn: parent
+                        text: index+1+"分"
+                    }
+                    TapHandler{
+                        onTapped: {
+                            if(index+1>desk.getLandlords2())
+                            desk.setLandlords(p3.ref,index+1)
+                            p3a.visible=false
+                            desk.landlord=desk.getLandlords1()
+                        }
+                    }
+                }
+            }
+        }
+
+        Rectangle{
+            id:p3c
+            width: 120;height: 50;color: "#FFFF00"
+            radius: 10
+            Text {
+                anchors.centerIn: parent
+                color: "red"
+                text: qsTr("开始游戏")
+                font.pointSize: 20
+            }
+            TapHandler{
+                onTapped: {
+                    parent.color="grey"
+                    desk.setAlready(1)
+                    enabled=false
+                }
+            }
+        }
     Row{
         spacing: 10
 

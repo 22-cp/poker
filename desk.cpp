@@ -21,7 +21,26 @@ desk::desk()
     std::shuffle(library.begin(), library.end(), g);
 
     nowPlay = 0;
+    already = 0;
 }
+
+std::vector<people::poker> desk::getLandlordHand()
+{
+    return landlordHand;
+}
+
+void desk::setAlready(int n)
+{
+    already = already + n;
+    emit alreadyChanged();
+}
+
+int desk::getAlready()
+{
+    return already;
+}
+
+void desk::onAlreadyChanged() {}
 
 void desk::onNowPlayChanged() {}
 
@@ -59,6 +78,7 @@ void desk::dealCard() //从牌库中抽取一张牌加入到手牌
         p3Hand.push_back(*c);
         library.erase(library.begin());
     }
+    landlordHand = library;
 }
 std::vector<int> desk::getNum()
 {
@@ -77,16 +97,31 @@ void desk::setNum(std::vector<int> num1)
 
 void desk::onNumChanged() {}
 
-std::vector<int> desk::getLandlords()
+void desk::setTemLandlord(int ref)
 {
-    return landlords;
+    temLandlord = ref;
+    emit temLandlordChanged();
 }
 
-void desk::setLandlords(int ref, int mark)
+int desk::getTemLandlord()
 {
-    landlords.push_back(ref);
-    landlords.push_back(mark);
+    return temLandlord;
 }
+
+void desk::onTemLandlordChanged() {}
+
+void desk::setMark(int n)
+{
+    mark = n;
+    emit markChanged();
+}
+
+int desk::getMark()
+{
+    return mark;
+}
+
+void desk::onMarkChanged() {}
 
 void desk::setLandlord(int ref)
 {

@@ -38,9 +38,7 @@ constexpr auto qt_meta_stringdata_CLASSpeopleENDCLASS = QtMocHelpers::stringData
     "people",
     "refChanged",
     "",
-    "playCardChanged",
     "onRefChanged",
-    "onPlayCardChanged",
     "output1",
     "sortHand",
     "usingCard",
@@ -55,11 +53,7 @@ constexpr auto qt_meta_stringdata_CLASSpeopleENDCLASS = QtMocHelpers::stringData
     "getHandSize",
     "getNum1",
     "pushCard",
-    "setPlayCard",
-    "s",
-    "getPlayCard",
-    "ref",
-    "playCard"
+    "ref"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -72,58 +66,49 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSpeopleENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
-       2,  131, // properties
+      11,   14, // methods
+       1,  101, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  104,    2, 0x06,    3 /* Public */,
-       3,    0,  105,    2, 0x06,    4 /* Public */,
+       1,    0,   80,    2, 0x06,    2 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    0,  106,    2, 0x0a,    5 /* Public */,
-       5,    0,  107,    2, 0x0a,    6 /* Public */,
+       3,    0,   81,    2, 0x0a,    3 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    0,  108,    2, 0x02,    7 /* Public */,
-       7,    0,  109,    2, 0x02,    8 /* Public */,
-       8,    1,  110,    2, 0x02,    9 /* Public */,
-      11,    1,  113,    2, 0x02,   11 /* Public */,
-      13,    1,  116,    2, 0x02,   13 /* Public */,
-      16,    1,  119,    2, 0x02,   15 /* Public */,
-      17,    0,  122,    2, 0x02,   17 /* Public */,
-      18,    0,  123,    2, 0x02,   18 /* Public */,
-      19,    1,  124,    2, 0x02,   19 /* Public */,
-      20,    1,  127,    2, 0x02,   21 /* Public */,
-      22,    0,  130,    2, 0x02,   23 /* Public */,
+       4,    0,   82,    2, 0x02,    4 /* Public */,
+       5,    0,   83,    2, 0x02,    5 /* Public */,
+       6,    1,   84,    2, 0x02,    6 /* Public */,
+       9,    1,   87,    2, 0x02,    8 /* Public */,
+      11,    1,   90,    2, 0x02,   10 /* Public */,
+      14,    1,   93,    2, 0x02,   12 /* Public */,
+      15,    0,   96,    2, 0x02,   14 /* Public */,
+      16,    0,   97,    2, 0x02,   15 /* Public */,
+      17,    1,   98,    2, 0x02,   16 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
-    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
 
  // methods: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 9,   10,
-    QMetaType::Void, QMetaType::Int,   12,
-    QMetaType::Void, 0x80000000 | 14,   15,
-    QMetaType::QString, QMetaType::Int,   12,
+    QMetaType::Void, 0x80000000 | 7,    8,
+    QMetaType::Void, QMetaType::Int,   10,
+    QMetaType::Void, 0x80000000 | 12,   13,
+    QMetaType::QString, QMetaType::Int,   10,
     QMetaType::Int,
-    0x80000000 | 9,
-    QMetaType::Bool, 0x80000000 | 9,   10,
-    QMetaType::Void, QMetaType::Bool,   21,
-    QMetaType::Bool,
+    0x80000000 | 7,
+    QMetaType::Bool, 0x80000000 | 7,    8,
 
  // properties: name, type, flags
-      23, QMetaType::Int, 0x00015903, uint(0), 0,
-      24, QMetaType::Bool, 0x00015903, uint(1), 0,
+      18, QMetaType::Int, 0x00015903, uint(0), 0,
 
        0        // eod
 };
@@ -137,17 +122,11 @@ Q_CONSTINIT const QMetaObject people::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSpeopleENDCLASS_t,
         // property 'ref'
         QtPrivate::TypeAndForceComplete<int, std::true_type>,
-        // property 'playCard'
-        QtPrivate::TypeAndForceComplete<bool, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<people, std::true_type>,
         // method 'refChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'playCardChanged'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onRefChanged'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onPlayCardChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'output1'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -171,12 +150,7 @@ Q_CONSTINIT const QMetaObject people::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<std::vector<int>, std::false_type>,
         // method 'pushCard'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        QtPrivate::TypeAndForceComplete<std::vector<int>, std::false_type>,
-        // method 'setPlayCard'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        // method 'getPlayCard'
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>
+        QtPrivate::TypeAndForceComplete<std::vector<int>, std::false_type>
     >,
     nullptr
 } };
@@ -188,24 +162,19 @@ void people::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         (void)_t;
         switch (_id) {
         case 0: _t->refChanged(); break;
-        case 1: _t->playCardChanged(); break;
-        case 2: _t->onRefChanged(); break;
-        case 3: _t->onPlayCardChanged(); break;
-        case 4: _t->output1(); break;
-        case 5: _t->sortHand(); break;
-        case 6: _t->usingCard((*reinterpret_cast< std::add_pointer_t<std::vector<int>>>(_a[1]))); break;
-        case 7: _t->select((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 8: _t->setHand((*reinterpret_cast< std::add_pointer_t<std::vector<poker>>>(_a[1]))); break;
-        case 9: { QString _r = _t->getCardName((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+        case 1: _t->onRefChanged(); break;
+        case 2: _t->output1(); break;
+        case 3: _t->sortHand(); break;
+        case 4: _t->usingCard((*reinterpret_cast< std::add_pointer_t<std::vector<int>>>(_a[1]))); break;
+        case 5: _t->select((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 6: _t->setHand((*reinterpret_cast< std::add_pointer_t<std::vector<poker>>>(_a[1]))); break;
+        case 7: { QString _r = _t->getCardName((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 10: { int _r = _t->getHandSize();
+        case 8: { int _r = _t->getHandSize();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 11: { std::vector<int> _r = _t->getNum1();
+        case 9: { std::vector<int> _r = _t->getNum1();
             if (_a[0]) *reinterpret_cast< std::vector<int>*>(_a[0]) = std::move(_r); }  break;
-        case 12: { bool _r = _t->pushCard((*reinterpret_cast< std::add_pointer_t<std::vector<int>>>(_a[1])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 13: _t->setPlayCard((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 14: { bool _r = _t->getPlayCard();
+        case 10: { bool _r = _t->pushCard((*reinterpret_cast< std::add_pointer_t<std::vector<int>>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
@@ -218,20 +187,12 @@ void people::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
                 return;
             }
         }
-        {
-            using _t = void (people::*)();
-            if (_t _q_method = &people::playCardChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
-                *result = 1;
-                return;
-            }
-        }
     } else if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<people *>(_o);
         (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< int*>(_v) = _t->getRef(); break;
-        case 1: *reinterpret_cast< bool*>(_v) = _t->getPlayCard(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -240,7 +201,6 @@ void people::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setRef(*reinterpret_cast< int*>(_v)); break;
-        case 1: _t->setPlayCard(*reinterpret_cast< bool*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -267,18 +227,18 @@ int people::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 11)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 15;
+        _id -= 11;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 1;
     }
     return _id;
 }
@@ -287,11 +247,5 @@ int people::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void people::refChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
-}
-
-// SIGNAL 1
-void people::playCardChanged()
-{
-    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 QT_WARNING_POP

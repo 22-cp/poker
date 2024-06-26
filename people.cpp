@@ -38,18 +38,18 @@ void people::sortHand() //将手牌排序
     }
 }
 
-void people::setPlayCard(bool s)
-{
-    playCard = s;
-    emit playCardChanged();
-}
+// void people::setPlayCard(bool s)
+// {
+//     playCard = s;
+//     emit playCardChanged();
+// }
 
-void people::onPlayCardChanged() {}
+// void people::onPlayCardChanged() {}
 
-bool people::getPlayCard()
-{
-    return playCard;
-}
+// bool people::getPlayCard()
+// {
+//     return playCard;
+// }
 
 bool people::pushCard(std::vector<int> num)
 {

@@ -77,22 +77,6 @@
                     ],
                     "name": "pushCard",
                     "returnType": "bool"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "s",
-                            "type": "bool"
-                        }
-                    ],
-                    "name": "setPlayCard",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "name": "getPlayCard",
-                    "returnType": "bool"
                 }
             ],
             "object": true,
@@ -111,21 +95,6 @@
                     "type": "int",
                     "user": false,
                     "write": "setRef"
-                },
-                {
-                    "constant": false,
-                    "designable": true,
-                    "final": true,
-                    "index": 1,
-                    "name": "playCard",
-                    "notify": "playCardChanged",
-                    "read": "getPlayCard",
-                    "required": false,
-                    "scriptable": true,
-                    "stored": true,
-                    "type": "bool",
-                    "user": false,
-                    "write": "setPlayCard"
                 }
             ],
             "qualifiedClassName": "people",
@@ -134,22 +103,12 @@
                     "access": "public",
                     "name": "refChanged",
                     "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "name": "playCardChanged",
-                    "returnType": "void"
                 }
             ],
             "slots": [
                 {
                     "access": "public",
                     "name": "onRefChanged",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "name": "onPlayCardChanged",
                     "returnType": "void"
                 }
             ],
