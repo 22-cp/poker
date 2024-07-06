@@ -13,17 +13,20 @@ ApplicationWindow {
     Desk{
         id:desk
         onNowPlayChanged: {
-            if(nowPlayChanged()===1){
+            if(desk.nowPlay===1){
+                console.log("111")
                 p1b.visible=true
                 p2b.visible=false
                 p3b.visible=false
             }
-            else if(nowPlayChanged()===2){
+            else if(desk.nowPlay===2){
+                console.log("222")
                 p2b.visible=true
                 p1b.visible=false
                 p3b.visible=false
             }
             else{
+                console.log("333")
                 p3b.visible=true
                 p2b.visible=false
                 p1b.visible=false
@@ -50,11 +53,16 @@ ApplicationWindow {
             }
         }
         onMarkChanged: {
-            if(tem==2){
-                for(var i=0;i<mark;i++){
-                    p2mark.children[i].enabled=false
-                }
+            if(desk.mark===3){
+                p1a.visible=false
+                p2a.visible=false
+                p3a.visible=false
+                desk.landlord=desk.temLandlord
+                //desk.nowPlay=desk.landlord
             }
+        }
+        onLandlordChanged: {
+            desk.nowPlay=desk.landlord
         }
     }
 
@@ -77,6 +85,8 @@ ApplicationWindow {
     property int n1: p1.getHandSize()
     property int n2: p2.getHandSize()
     property int n3: p3.getHandSize()
+    property int n2m: 3
+    property int n3m: 3
 
 
 
@@ -101,14 +111,9 @@ ApplicationWindow {
                     TapHandler{
                         onTapped: {
                             if(desk.getNumRef()!==0&&desk.getNumRef()!==p1.ref){
-                            p1.setPlayCard(false)
-                            p2.setPlayCard(true)
-                            }
-                            else{
-                                console.log("当前该你出牌！")
+                                desk.nowPlay=2
                             }
                         }
-                        //enabled: false
                     }
                 }
 
@@ -124,14 +129,10 @@ ApplicationWindow {
 
                 TapHandler{
                     onTapped: {
-                        if(p1.getPlayCard()){
                         p1.usingCard(desk.getNum())
                         if(p1.pushCard(desk.getNum())){
                             desk.num=p1.getNum1()
-                            p1.setPlayCard(false)
-                            p2.setPlayCard(true)
                             n1=p1.getHandSize()
-                        }
                         }
                     }
                 }
@@ -156,6 +157,7 @@ ApplicationWindow {
                         p2a.visible=true
                         tem++
                         desk.mark=0;
+                        n2m=3-desk.mark
                     }
                 }
             }
@@ -166,7 +168,7 @@ ApplicationWindow {
                     width: 20;height: 20;color: "grey"
                     Text{
                         anchors.centerIn: parent
-                        text: index+1+"分"
+                        text: 3-index+"分"
                     }
                     TapHandler{
                         onTapped: {
@@ -174,7 +176,10 @@ ApplicationWindow {
                             p1a.visible=false
                             p2a.visible=true
                             tem++
-                            desk.mark=index+1
+                            desk.mark=3-index
+                            if(desk.mark!=3){
+                            n2m=3-desk.mark
+                            }
                         }
                     }
                 }
@@ -301,19 +306,23 @@ ApplicationWindow {
 
             Repeater{
                 id:p2mark
-                model:3
+                model:n2m
                 delegate: Rectangle{
                     width: 20;height: 20;color: "blue"
                     Text{
                         anchors.centerIn: parent
-                        text: index+1+"分"
+                        text: 3-index+"分"
                     }
                     TapHandler{
                         onTapped: {
-                            if(index>desk.getLandlords2())
-                            desk.setLandlords(p2.ref,index+1)
+                            desk.temLandlord=p2.ref
                             p2a.visible=false
                             p3a.visible=true
+                            tem++
+                            desk.mark=3-index
+                            if(desk.mark!=3){
+                            n3m=3-desk.mark
+                            }
                         }
                     }
                 }
@@ -440,19 +449,20 @@ ApplicationWindow {
             }
 
             Repeater{
-                model:3
+                model:n3m
                 delegate: Rectangle{
                     width: 20;height: 20;color: "grey"
                     Text{
                         anchors.centerIn: parent
-                        text: index+1+"分"
+                        text: 3-index+"分"
                     }
                     TapHandler{
                         onTapped: {
-                            if(index+1>desk.getLandlords2())
-                            desk.setLandlords(p3.ref,index+1)
-                            p3a.visible=false
-                            desk.landlord=desk.getLandlords1()
+                            desk.temLandlord=p3.ref
+                            p1a.visible=false
+                            p2a.visible=true
+                            tem++
+                            desk.mark=3-index
                         }
                     }
                 }

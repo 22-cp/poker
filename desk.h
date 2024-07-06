@@ -55,14 +55,14 @@ public slots:
 
 private:
     std::vector<int> num; //第二位存牌型，第三位存最大值，第四位存张数，第一位存谁出的牌
-    std::vector<people::poker> library;
-    std::vector<people::poker> p1Hand;
-    std::vector<people::poker> p2Hand;
-    std::vector<people::poker> p3Hand;
-    std::vector<people::poker> landlordHand;
-    int temLandlord;
-    int mark;
-    int landlord;
-    int nowPlay;
-    int already;
+    std::vector<people::poker> library;      //牌库
+    std::vector<people::poker> p1Hand;       //p1手牌
+    std::vector<people::poker> p2Hand;       //p2手牌
+    std::vector<people::poker> p3Hand;       //p3手牌
+    std::vector<people::poker> landlordHand; //地主牌
+    int temLandlord;                         //临时地主
+    int mark;                                //叫分
+    int landlord;                            //地主
+    int nowPlay;                             //当前出牌人
+    int already;                             //准备人数
 };

@@ -65,9 +65,9 @@ public slots:
     //void onPlayCardChanged();
 
 private:
-    std::vector<int> num1;
-    std::vector<poker> hand;
-    std::vector<int> output;
-    int ref;
+    std::vector<int> num1;   //存储出牌信息
+    std::vector<poker> hand; //手牌
+    std::vector<int> output; //存储出牌的牌
+    int ref;                 //序号
     bool playCard;
 };
