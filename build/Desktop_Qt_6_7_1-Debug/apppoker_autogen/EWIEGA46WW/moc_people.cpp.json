@@ -77,6 +77,17 @@
                     ],
                     "name": "pushCard",
                     "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "card",
+                            "type": "std::vector<poker>"
+                        }
+                    ],
+                    "name": "toushCard",
+                    "returnType": "void"
                 }
             ],
             "object": true,

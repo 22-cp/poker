@@ -43,12 +43,14 @@ constexpr auto qt_meta_stringdata_CLASSdeskENDCLASS = QtMocHelpers::stringData(
     "alreadyChanged",
     "temLandlordChanged",
     "markChanged",
+    "overChanged",
     "onNowPlayChanged",
     "onNumChanged",
     "onLandlordChanged",
     "onAlreadyChanged",
     "onTemLandlordChanged",
     "onMarkChanged",
+    "onOverChanged",
     "getNumRef",
     "dealCard",
     "getP1Hand",
@@ -56,6 +58,7 @@ constexpr auto qt_meta_stringdata_CLASSdeskENDCLASS = QtMocHelpers::stringData(
     "getP2Hand",
     "getP3Hand",
     "getLandlordHand",
+    "setTemLibrary",
     "getNum",
     "std::vector<int>",
     "setAlready",
@@ -65,7 +68,8 @@ constexpr auto qt_meta_stringdata_CLASSdeskENDCLASS = QtMocHelpers::stringData(
     "landlord",
     "already",
     "temLandlord",
-    "mark"
+    "mark",
+    "over"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -78,40 +82,44 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdeskENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      20,   14, // methods
-       6,  156, // properties
+      23,   14, // methods
+       7,  177, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       6,       // signalCount
+       7,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  134,    2, 0x06,    7 /* Public */,
-       3,    0,  135,    2, 0x06,    8 /* Public */,
-       4,    0,  136,    2, 0x06,    9 /* Public */,
-       5,    0,  137,    2, 0x06,   10 /* Public */,
-       6,    0,  138,    2, 0x06,   11 /* Public */,
-       7,    0,  139,    2, 0x06,   12 /* Public */,
+       1,    0,  152,    2, 0x06,    8 /* Public */,
+       3,    0,  153,    2, 0x06,    9 /* Public */,
+       4,    0,  154,    2, 0x06,   10 /* Public */,
+       5,    0,  155,    2, 0x06,   11 /* Public */,
+       6,    0,  156,    2, 0x06,   12 /* Public */,
+       7,    0,  157,    2, 0x06,   13 /* Public */,
+       8,    0,  158,    2, 0x06,   14 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       8,    0,  140,    2, 0x0a,   13 /* Public */,
-       9,    0,  141,    2, 0x0a,   14 /* Public */,
-      10,    0,  142,    2, 0x0a,   15 /* Public */,
-      11,    0,  143,    2, 0x0a,   16 /* Public */,
-      12,    0,  144,    2, 0x0a,   17 /* Public */,
-      13,    0,  145,    2, 0x0a,   18 /* Public */,
+       9,    0,  159,    2, 0x0a,   15 /* Public */,
+      10,    0,  160,    2, 0x0a,   16 /* Public */,
+      11,    0,  161,    2, 0x0a,   17 /* Public */,
+      12,    0,  162,    2, 0x0a,   18 /* Public */,
+      13,    0,  163,    2, 0x0a,   19 /* Public */,
+      14,    0,  164,    2, 0x0a,   20 /* Public */,
+      15,    0,  165,    2, 0x0a,   21 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-      14,    0,  146,    2, 0x02,   19 /* Public */,
-      15,    0,  147,    2, 0x02,   20 /* Public */,
-      16,    0,  148,    2, 0x02,   21 /* Public */,
-      18,    0,  149,    2, 0x02,   22 /* Public */,
-      19,    0,  150,    2, 0x02,   23 /* Public */,
-      20,    0,  151,    2, 0x02,   24 /* Public */,
-      21,    0,  152,    2, 0x02,   25 /* Public */,
-      23,    1,  153,    2, 0x02,   26 /* Public */,
+      16,    0,  166,    2, 0x02,   22 /* Public */,
+      17,    0,  167,    2, 0x02,   23 /* Public */,
+      18,    0,  168,    2, 0x02,   24 /* Public */,
+      20,    0,  169,    2, 0x02,   25 /* Public */,
+      21,    0,  170,    2, 0x02,   26 /* Public */,
+      22,    0,  171,    2, 0x02,   27 /* Public */,
+      23,    0,  172,    2, 0x02,   28 /* Public */,
+      24,    0,  173,    2, 0x02,   29 /* Public */,
+      26,    1,  174,    2, 0x02,   30 /* Public */,
 
  // signals: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -126,24 +134,27 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdeskENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
 
  // methods: parameters
     QMetaType::Int,
     QMetaType::Void,
-    0x80000000 | 17,
-    0x80000000 | 17,
-    0x80000000 | 17,
-    0x80000000 | 17,
-    0x80000000 | 22,
-    QMetaType::Void, QMetaType::Int,   24,
+    0x80000000 | 19,
+    0x80000000 | 19,
+    0x80000000 | 19,
+    0x80000000 | 19,
+    QMetaType::Void,
+    0x80000000 | 25,
+    QMetaType::Void, QMetaType::Int,   27,
 
  // properties: name, type, flags
-      25, QMetaType::Int, 0x00015903, uint(0), 0,
-      26, 0x80000000 | 22, 0x0001590b, uint(1), 0,
-      27, QMetaType::Int, 0x00015903, uint(2), 0,
-      28, QMetaType::Int, 0x00015903, uint(3), 0,
-      29, QMetaType::Int, 0x00015903, uint(4), 0,
-      30, QMetaType::Int, 0x00015903, uint(5), 0,
+      28, QMetaType::Int, 0x00015903, uint(0), 0,
+      29, 0x80000000 | 25, 0x0001590b, uint(1), 0,
+      30, QMetaType::Int, 0x00015903, uint(2), 0,
+      31, QMetaType::Int, 0x00015903, uint(3), 0,
+      32, QMetaType::Int, 0x00015903, uint(4), 0,
+      33, QMetaType::Int, 0x00015903, uint(5), 0,
+      34, QMetaType::Int, 0x00015903, uint(6), 0,
 
        0        // eod
 };
@@ -167,6 +178,8 @@ Q_CONSTINIT const QMetaObject desk::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::true_type>,
         // property 'mark'
         QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // property 'over'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<desk, std::true_type>,
         // method 'nowPlayChanged'
@@ -181,6 +194,8 @@ Q_CONSTINIT const QMetaObject desk::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'markChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'overChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onNowPlayChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onNumChanged'
@@ -192,6 +207,8 @@ Q_CONSTINIT const QMetaObject desk::staticMetaObject = { {
         // method 'onTemLandlordChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onMarkChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onOverChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'getNumRef'
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
@@ -205,6 +222,8 @@ Q_CONSTINIT const QMetaObject desk::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<std::vector<people::poker>, std::false_type>,
         // method 'getLandlordHand'
         QtPrivate::TypeAndForceComplete<std::vector<people::poker>, std::false_type>,
+        // method 'setTemLibrary'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'getNum'
         QtPrivate::TypeAndForceComplete<std::vector<int>, std::false_type>,
         // method 'setAlready'
@@ -226,26 +245,29 @@ void desk::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 3: _t->alreadyChanged(); break;
         case 4: _t->temLandlordChanged(); break;
         case 5: _t->markChanged(); break;
-        case 6: _t->onNowPlayChanged(); break;
-        case 7: _t->onNumChanged(); break;
-        case 8: _t->onLandlordChanged(); break;
-        case 9: _t->onAlreadyChanged(); break;
-        case 10: _t->onTemLandlordChanged(); break;
-        case 11: _t->onMarkChanged(); break;
-        case 12: { int _r = _t->getNumRef();
+        case 6: _t->overChanged(); break;
+        case 7: _t->onNowPlayChanged(); break;
+        case 8: _t->onNumChanged(); break;
+        case 9: _t->onLandlordChanged(); break;
+        case 10: _t->onAlreadyChanged(); break;
+        case 11: _t->onTemLandlordChanged(); break;
+        case 12: _t->onMarkChanged(); break;
+        case 13: _t->onOverChanged(); break;
+        case 14: { int _r = _t->getNumRef();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 13: _t->dealCard(); break;
-        case 14: { std::vector<people::poker> _r = _t->getP1Hand();
+        case 15: _t->dealCard(); break;
+        case 16: { std::vector<people::poker> _r = _t->getP1Hand();
             if (_a[0]) *reinterpret_cast< std::vector<people::poker>*>(_a[0]) = std::move(_r); }  break;
-        case 15: { std::vector<people::poker> _r = _t->getP2Hand();
+        case 17: { std::vector<people::poker> _r = _t->getP2Hand();
             if (_a[0]) *reinterpret_cast< std::vector<people::poker>*>(_a[0]) = std::move(_r); }  break;
-        case 16: { std::vector<people::poker> _r = _t->getP3Hand();
+        case 18: { std::vector<people::poker> _r = _t->getP3Hand();
             if (_a[0]) *reinterpret_cast< std::vector<people::poker>*>(_a[0]) = std::move(_r); }  break;
-        case 17: { std::vector<people::poker> _r = _t->getLandlordHand();
+        case 19: { std::vector<people::poker> _r = _t->getLandlordHand();
             if (_a[0]) *reinterpret_cast< std::vector<people::poker>*>(_a[0]) = std::move(_r); }  break;
-        case 18: { std::vector<int> _r = _t->getNum();
+        case 20: _t->setTemLibrary(); break;
+        case 21: { std::vector<int> _r = _t->getNum();
             if (_a[0]) *reinterpret_cast< std::vector<int>*>(_a[0]) = std::move(_r); }  break;
-        case 19: _t->setAlready((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 22: _t->setAlready((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -292,6 +314,13 @@ void desk::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
                 return;
             }
         }
+        {
+            using _t = void (desk::*)();
+            if (_t _q_method = &desk::overChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 6;
+                return;
+            }
+        }
     } else if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<desk *>(_o);
         (void)_t;
@@ -303,6 +332,7 @@ void desk::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 3: *reinterpret_cast< int*>(_v) = _t->getAlready(); break;
         case 4: *reinterpret_cast< int*>(_v) = _t->getTemLandlord(); break;
         case 5: *reinterpret_cast< int*>(_v) = _t->getMark(); break;
+        case 6: *reinterpret_cast< int*>(_v) = _t->getOver(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -316,6 +346,7 @@ void desk::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 3: _t->setAlready(*reinterpret_cast< int*>(_v)); break;
         case 4: _t->setTemLandlord(*reinterpret_cast< int*>(_v)); break;
         case 5: _t->setMark(*reinterpret_cast< int*>(_v)); break;
+        case 6: _t->setOver(*reinterpret_cast< int*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -342,18 +373,18 @@ int desk::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 20)
+        if (_id < 23)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 20;
+        _id -= 23;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 20)
+        if (_id < 23)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 20;
+        _id -= 23;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }
@@ -392,5 +423,11 @@ void desk::temLandlordChanged()
 void desk::markChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
+}
+
+// SIGNAL 6
+void desk::overChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 6, nullptr);
 }
 QT_WARNING_POP

@@ -26,6 +26,12 @@ int people::getRef()
 
 void people::onRefChanged() {}
 
+void people::toushCard(std::vector<poker> card)
+{
+    hand.insert(hand.end(), card.begin(), card.end());
+    sortHand();
+}
+
 void people::sortHand() //将手牌排序
 {
     int n = hand.size();

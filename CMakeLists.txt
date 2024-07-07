@@ -23,6 +23,7 @@ qt_add_qml_module(apppoker
     SOURCES qtsocket.h qtsocket.cpp
     RESOURCES
     RESOURCES CardLibrary
+    RESOURCES image.qrc
 )
 
 target_compile_features(apppoker PRIVATE cxx_std_20)

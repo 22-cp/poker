@@ -77,8 +77,13 @@ poker/CardLibrary: /root/poker/poker/CardLibrary
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Copying CardLibrary to /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/poker/CardLibrary"
 	cd /root/poker/poker && /usr/bin/cmake -E copy /root/poker/poker/CardLibrary /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/poker/CardLibrary
 
+poker/image.qrc: /root/poker/poker/image.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Copying image.qrc to /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/poker/image.qrc"
+	cd /root/poker/poker && /usr/bin/cmake -E copy /root/poker/poker/image.qrc /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/poker/image.qrc
+
 apppoker_tooling: poker/CardLibrary
 apppoker_tooling: poker/Main.qml
+apppoker_tooling: poker/image.qrc
 apppoker_tooling: CMakeFiles/apppoker_tooling.dir/build.make
 .PHONY : apppoker_tooling
 

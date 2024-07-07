@@ -40,6 +40,7 @@ public:
     Q_INVOKABLE int getHandSize();
     Q_INVOKABLE std::vector<int> getNum1();
     Q_INVOKABLE bool pushCard(std::vector<int> num);
+    Q_INVOKABLE void toushCard(std::vector<poker> card);
 
     // Q_INVOKABLE void setPlayCard(bool s);
     // Q_INVOKABLE bool getPlayCard();

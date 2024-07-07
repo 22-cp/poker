@@ -122,24 +122,32 @@ poker/apppoker.qmltypes: apppoker_qmltyperegistrations.cpp
 
 .qt/rcc/qrc_apppoker_raw_qml_0.cpp: /root/poker/poker/Main.qml
 .qt/rcc/qrc_apppoker_raw_qml_0.cpp: /root/poker/poker/CardLibrary
+.qt/rcc/qrc_apppoker_raw_qml_0.cpp: /root/poker/poker/image.qrc
 .qt/rcc/qrc_apppoker_raw_qml_0.cpp: .qt/rcc/apppoker_raw_qml_0.qrc
 .qt/rcc/qrc_apppoker_raw_qml_0.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Running rcc for resource apppoker_raw_qml_0"
 	/opt/Qt/6.7.1/gcc_64/libexec/rcc --output /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp --name apppoker_raw_qml_0 /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/apppoker_raw_qml_0.qrc --no-zstd
 
+apppoker_autogen/EWIEGA46WW/qrc_image.cpp: /root/poker/poker/image.qrc
+apppoker_autogen/EWIEGA46WW/qrc_image.cpp: CMakeFiles/apppoker_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json
+apppoker_autogen/EWIEGA46WW/qrc_image.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
+apppoker_autogen/EWIEGA46WW/qrc_image.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Automatic RCC for image.qrc"
+	/usr/bin/cmake -E cmake_autorcc /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/apppoker_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Debug
+
 meta_types/apppoker_json_file_list.txt: /opt/Qt/6.7.1/gcc_64/./libexec/cmake_automoc_parser
 meta_types/apppoker_json_file_list.txt: apppoker_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Running AUTOMOC file extraction for target apppoker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Running AUTOMOC file extraction for target apppoker"
 	/opt/Qt/6.7.1/gcc_64/libexec/cmake_automoc_parser --cmake-autogen-cache-file /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/apppoker_autogen.dir/ParseCache.txt --cmake-autogen-info-file /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/apppoker_autogen.dir/AutogenInfo.json --output-file-path /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/meta_types/apppoker_json_file_list.txt --timestamp-file-path /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/meta_types/apppoker_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/include
 
 meta_types/qt6apppoker_debug_metatypes.json: meta_types/qt6apppoker_debug_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating meta_types/qt6apppoker_debug_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating meta_types/qt6apppoker_debug_metatypes.json"
 	/usr/bin/cmake -E true
 
 CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o: apppoker_autogen/mocs_compilation.cpp
 CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o -MF CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/mocs_compilation.cpp
 
 CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.i: cmake_force
@@ -153,7 +161,7 @@ CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.s: cmake_force
 CMakeFiles/apppoker.dir/main.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/main.cpp.o: /root/poker/poker/main.cpp
 CMakeFiles/apppoker.dir/main.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/apppoker.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/apppoker.dir/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/main.cpp.o -MF CMakeFiles/apppoker.dir/main.cpp.o.d -o CMakeFiles/apppoker.dir/main.cpp.o -c /root/poker/poker/main.cpp
 
 CMakeFiles/apppoker.dir/main.cpp.i: cmake_force
@@ -167,7 +175,7 @@ CMakeFiles/apppoker.dir/main.cpp.s: cmake_force
 CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o: apppoker_qmltyperegistrations.cpp
 CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o -MF CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o.d -o CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_qmltyperegistrations.cpp
 
 CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.i: cmake_force
@@ -181,7 +189,7 @@ CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.s: cmake_force
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o: .qt/rcc/qrc_qmake_poker.cpp
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o -MF CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o.d -o CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp
 
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp.i: cmake_force
@@ -195,7 +203,7 @@ CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_poker.cpp
 CMakeFiles/apppoker.dir/people.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/people.cpp.o: /root/poker/poker/people.cpp
 CMakeFiles/apppoker.dir/people.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/apppoker.dir/people.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/apppoker.dir/people.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/people.cpp.o -MF CMakeFiles/apppoker.dir/people.cpp.o.d -o CMakeFiles/apppoker.dir/people.cpp.o -c /root/poker/poker/people.cpp
 
 CMakeFiles/apppoker.dir/people.cpp.i: cmake_force
@@ -209,7 +217,7 @@ CMakeFiles/apppoker.dir/people.cpp.s: cmake_force
 CMakeFiles/apppoker.dir/desk.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/desk.cpp.o: /root/poker/poker/desk.cpp
 CMakeFiles/apppoker.dir/desk.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/apppoker.dir/desk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/apppoker.dir/desk.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/desk.cpp.o -MF CMakeFiles/apppoker.dir/desk.cpp.o.d -o CMakeFiles/apppoker.dir/desk.cpp.o -c /root/poker/poker/desk.cpp
 
 CMakeFiles/apppoker.dir/desk.cpp.i: cmake_force
@@ -223,7 +231,7 @@ CMakeFiles/apppoker.dir/desk.cpp.s: cmake_force
 CMakeFiles/apppoker.dir/qtserver.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/qtserver.cpp.o: /root/poker/poker/qtserver.cpp
 CMakeFiles/apppoker.dir/qtserver.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/apppoker.dir/qtserver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/apppoker.dir/qtserver.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/qtserver.cpp.o -MF CMakeFiles/apppoker.dir/qtserver.cpp.o.d -o CMakeFiles/apppoker.dir/qtserver.cpp.o -c /root/poker/poker/qtserver.cpp
 
 CMakeFiles/apppoker.dir/qtserver.cpp.i: cmake_force
@@ -237,7 +245,7 @@ CMakeFiles/apppoker.dir/qtserver.cpp.s: cmake_force
 CMakeFiles/apppoker.dir/qtsocket.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/qtsocket.cpp.o: /root/poker/poker/qtsocket.cpp
 CMakeFiles/apppoker.dir/qtsocket.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/apppoker.dir/qtsocket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/apppoker.dir/qtsocket.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/qtsocket.cpp.o -MF CMakeFiles/apppoker.dir/qtsocket.cpp.o.d -o CMakeFiles/apppoker.dir/qtsocket.cpp.o -c /root/poker/poker/qtsocket.cpp
 
 CMakeFiles/apppoker.dir/qtsocket.cpp.i: cmake_force
@@ -251,7 +259,7 @@ CMakeFiles/apppoker.dir/qtsocket.cpp.s: cmake_force
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o: .rcc/qmlcache/apppoker_qmlcache_loader.cpp
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o -MF CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o.d -o CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp
 
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.i: cmake_force
@@ -265,7 +273,7 @@ CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlc
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o: .rcc/qmlcache/apppoker_Main_qml.cpp
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o -MF CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o.d -o CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp
 
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.i: cmake_force
@@ -279,7 +287,7 @@ CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o: CMakeFiles/apppoker.dir/flags.make
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o: .qt/rcc/qrc_apppoker_raw_qml_0.cpp
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o -MF CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o.d -o CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp
 
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.i: cmake_force
@@ -289,6 +297,20 @@ CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qm
 CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp -o CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.s
+
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o: CMakeFiles/apppoker.dir/flags.make
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o: apppoker_autogen/EWIEGA46WW/qrc_image.cpp
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o -MF CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o.d -o CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_image.cpp
+
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_image.cpp > CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i
+
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_image.cpp -o CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s
 
 # Object files for target apppoker
 apppoker_OBJECTS = \
@@ -302,7 +324,8 @@ apppoker_OBJECTS = \
 "CMakeFiles/apppoker.dir/qtsocket.cpp.o" \
 "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o" \
 "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o" \
-"CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o"
+"CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o" \
+"CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o"
 
 # External object files for target apppoker
 apppoker_EXTERNAL_OBJECTS =
@@ -318,6 +341,7 @@ apppoker: CMakeFiles/apppoker.dir/qtsocket.cpp.o
 apppoker: CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o
 apppoker: CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o
 apppoker: CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o
+apppoker: CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o
 apppoker: CMakeFiles/apppoker.dir/build.make
 apppoker: /opt/Qt/6.7.1/gcc_64/lib/libQt6Quick.so.6.7.1
 apppoker: /opt/Qt/6.7.1/gcc_64/lib/libQt6QmlModels.so.6.7.1
@@ -330,7 +354,7 @@ apppoker: /opt/Qt/6.7.1/gcc_64/lib/libQt6Core.so.6.7.1
 apppoker: /usr/lib/libGLX.so
 apppoker: /usr/lib/libOpenGL.so
 apppoker: CMakeFiles/apppoker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable apppoker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable apppoker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/apppoker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -345,6 +369,7 @@ CMakeFiles/apppoker.dir/depend: .qt/rcc/qrc_apppoker_raw_qml_0.cpp
 CMakeFiles/apppoker.dir/depend: .qt/rcc/qrc_qmake_poker.cpp
 CMakeFiles/apppoker.dir/depend: .rcc/qmlcache/apppoker_Main_qml.cpp
 CMakeFiles/apppoker.dir/depend: .rcc/qmlcache/apppoker_qmlcache_loader.cpp
+CMakeFiles/apppoker.dir/depend: apppoker_autogen/EWIEGA46WW/qrc_image.cpp
 CMakeFiles/apppoker.dir/depend: apppoker_qmltyperegistrations.cpp
 CMakeFiles/apppoker.dir/depend: meta_types/apppoker_json_file_list.txt
 CMakeFiles/apppoker.dir/depend: meta_types/qt6apppoker_debug_metatypes.json

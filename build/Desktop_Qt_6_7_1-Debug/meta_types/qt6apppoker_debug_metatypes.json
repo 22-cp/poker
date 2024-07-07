@@ -36,6 +36,11 @@
                     },
                     {
                         "access": "public",
+                        "name": "setTemLibrary",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
                         "name": "getNum",
                         "returnType": "std::vector<int>"
                     },
@@ -142,6 +147,21 @@
                         "type": "int",
                         "user": false,
                         "write": "setMark"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 6,
+                        "name": "over",
+                        "notify": "overChanged",
+                        "read": "getOver",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setOver"
                     }
                 ],
                 "qualifiedClassName": "desk",
@@ -175,6 +195,11 @@
                         "access": "public",
                         "name": "markChanged",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "overChanged",
+                        "returnType": "void"
                     }
                 ],
                 "slots": [
@@ -206,6 +231,11 @@
                     {
                         "access": "public",
                         "name": "onMarkChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "onOverChanged",
                         "returnType": "void"
                     }
                 ],
@@ -299,6 +329,17 @@
                         ],
                         "name": "pushCard",
                         "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "card",
+                                "type": "std::vector<poker>"
+                            }
+                        ],
+                        "name": "toushCard",
+                        "returnType": "void"
                     }
                 ],
                 "object": true,

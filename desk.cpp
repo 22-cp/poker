@@ -20,9 +20,33 @@ desk::desk()
     std::mt19937 g(rd());
     std::shuffle(library.begin(), library.end(), g);
 
+    temLibrary = library;
+
     nowPlay = 0;
     already = 0;
+    over = 0;
 }
+
+void desk::setTemLibrary()
+{
+    temLibrary = library;
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(temLibrary.begin(), temLibrary.end(), g);
+}
+
+int desk::getOver()
+{
+    return over;
+}
+
+void desk::setOver(int n)
+{
+    over = n;
+    emit overChanged();
+}
+
+void desk::onOverChanged() {}
 
 std::vector<people::poker> desk::getLandlordHand()
 {
@@ -65,20 +89,23 @@ int desk::getNumRef()
 
 void desk::dealCard() //从牌库中抽取一张牌加入到手牌
 {
+    p1Hand.clear();
+    p2Hand.clear();
+    p3Hand.clear();
     for (int i = 0; i < 17; i++) {
-        if (library.begin() == library.end()) {
+        if (temLibrary.begin() == temLibrary.end()) {
             cout << "No poker in it." << endl;
             return;
         }
-        auto c = library.begin();
+        auto c = temLibrary.begin();
         p1Hand.push_back(*c);
-        library.erase(library.begin());
+        temLibrary.erase(temLibrary.begin());
         p2Hand.push_back(*c);
-        library.erase(library.begin());
+        temLibrary.erase(temLibrary.begin());
         p3Hand.push_back(*c);
-        library.erase(library.begin());
+        temLibrary.erase(temLibrary.begin());
     }
-    landlordHand = library;
+    landlordHand = temLibrary;
 }
 std::vector<int> desk::getNum()
 {
