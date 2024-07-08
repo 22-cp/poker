@@ -508,6 +508,11 @@ QString people::getCardName(int n)
     return name;
 }
 
+int people::getCardNumber(int n)
+{
+    return hand[n].number;
+}
+
 int people::getHandSize()
 {
     return hand.size();

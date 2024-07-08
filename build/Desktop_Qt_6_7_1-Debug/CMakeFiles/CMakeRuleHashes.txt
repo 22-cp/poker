@@ -4,6 +4,7 @@ bfdb9ae43951102ca0e4787e506ccb68 .qt/rcc/qrc_apppoker_raw_qml_0.cpp
 b15bd89d797ed955b29c4788b34b575c .qt/rcc/qrc_qmake_poker.cpp
 b21ffa9a396833d877f02bf2c5859630 .rcc/qmlcache/apppoker_Main_qml.cpp
 56b22f88547894e22e0e511acf0d7b12 .rcc/qmlcache/apppoker_qmlcache_loader.cpp
+593d13c05c248bc8282d55093e10321e /root/poker/poker/build/下载/扑克牌素材/1.png
 bde95e8411fed5256c88da3298ee4c51 CMakeFiles/apppoker_autogen
 bde95e8411fed5256c88da3298ee4c51 CMakeFiles/apppoker_qmlimportscan
 4d14d4181cb8dee4da1b42eaf99d66b9 CMakeFiles/apppoker_qmllint
@@ -12,6 +13,7 @@ f75e9a03c5c7d6567fdd2608f2c3963e CMakeFiles/apppoker_qmllint_module
 bde95e8411fed5256c88da3298ee4c51 CMakeFiles/apppoker_qmltyperegistration
 910a0525f1280dc0b2e523b923058368 apppoker_autogen/EWIEGA46WW/qrc_image.cpp
 f012c50b1e4be09a876b3be070ec7e79 apppoker_autogen/EWIEGA46WW/qrc_resource1.cpp
+b4e4b0ddb8b263f6a5b6cc5b8c7d2f27 apppoker_autogen/EWIEGA46WW/qrc_resources.cpp
 aca7fce150f8faa0abb6c3186d80757e apppoker_autogen/timestamp
 0ee19c3ffcd1b69a3e24b18869ea4388 apppoker_qmltyperegistrations.cpp
 237b01e5e2558bba57bf6b8d5ccc9aaa meta_types/apppoker_json_file_list.txt
@@ -20,4 +22,6 @@ b8a340e812ae4252537f410ae898d9b5 meta_types/qt6apppoker_debug_metatypes.json.gen
 451e88b46b77a352cf980d98860ed0eb poker/CardLibrary
 c2182b4caad299927ea0f7b72e9efeee poker/Main.qml
 498a223952fe66e35a4bf1cfd4a3e9e5 poker/image.qrc
+ceeffede0b4cddd7d8ae8543eb58486c poker/images.qrc
 c75892a1c4eecf147dcb875cddb5eff8 poker/resource1.qrc
+e496973d02bdaa3bc310ce5eafeb5f2c poker/resources.qrc

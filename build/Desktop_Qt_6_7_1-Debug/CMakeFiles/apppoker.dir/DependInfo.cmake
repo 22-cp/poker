@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_image.cpp" "CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o" "gcc" "CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o.d"
+  "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp" "CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o" "gcc" "CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o.d"
   "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/mocs_compilation.cpp" "CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/apppoker.dir/apppoker_autogen/mocs_compilation.cpp.o.d"
   "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_qmltyperegistrations.cpp" "CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o" "gcc" "CMakeFiles/apppoker.dir/apppoker_qmltyperegistrations.cpp.o.d"
   "/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp" "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o" "gcc" "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o.d"

@@ -122,18 +122,73 @@ poker/apppoker.qmltypes: apppoker_qmltyperegistrations.cpp
 
 .qt/rcc/qrc_apppoker_raw_qml_0.cpp: /root/poker/poker/Main.qml
 .qt/rcc/qrc_apppoker_raw_qml_0.cpp: /root/poker/poker/CardLibrary
-.qt/rcc/qrc_apppoker_raw_qml_0.cpp: /root/poker/poker/image.qrc
+.qt/rcc/qrc_apppoker_raw_qml_0.cpp: /root/poker/poker/resources.qrc
 .qt/rcc/qrc_apppoker_raw_qml_0.cpp: .qt/rcc/apppoker_raw_qml_0.qrc
 .qt/rcc/qrc_apppoker_raw_qml_0.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Running rcc for resource apppoker_raw_qml_0"
 	/opt/Qt/6.7.1/gcc_64/libexec/rcc --output /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp --name apppoker_raw_qml_0 /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/apppoker_raw_qml_0.qrc --no-zstd
 
-apppoker_autogen/EWIEGA46WW/qrc_image.cpp: /root/poker/poker/image.qrc
-apppoker_autogen/EWIEGA46WW/qrc_image.cpp: CMakeFiles/apppoker_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json
-apppoker_autogen/EWIEGA46WW/qrc_image.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
-apppoker_autogen/EWIEGA46WW/qrc_image.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Automatic RCC for image.qrc"
-	/usr/bin/cmake -E cmake_autorcc /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/apppoker_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Debug
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/resources.qrc
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: CMakeFiles/apppoker_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/55.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/48.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/2.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/11.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/28.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/17.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/29.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/3.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/23.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/35.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/49.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/4.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/44.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/7.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/33.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/39.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/6.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/14.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/30.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/1.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/45.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/43.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/24.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/36.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/25.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/41.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/13.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/51.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/16.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/37.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/52.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/8.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/10.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/27.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/22.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/15.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/46.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/5.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/34.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/20.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/42.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/26.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/54.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/31.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/32.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/53.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/47.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/18.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/12.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/9.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/40.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/21.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/19.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/38.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /root/poker/poker/images/50.png
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Automatic RCC for resources.qrc"
+	/usr/bin/cmake -E cmake_autorcc /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/apppoker_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug
 
 meta_types/apppoker_json_file_list.txt: /opt/Qt/6.7.1/gcc_64/./libexec/cmake_automoc_parser
 meta_types/apppoker_json_file_list.txt: apppoker_autogen/timestamp
@@ -298,19 +353,19 @@ CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qm
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp -o CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.s
 
-CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o: CMakeFiles/apppoker.dir/flags.make
-CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o: apppoker_autogen/EWIEGA46WW/qrc_image.cpp
-CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o -MF CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o.d -o CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_image.cpp
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/apppoker.dir/flags.make
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o: apppoker_autogen/EWIEGA46WW/qrc_resources.cpp
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/apppoker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o -MF CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o.d -o CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o -c /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp
 
-CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_image.cpp > CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp > CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.i
 
-CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_image.cpp -o CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s
+CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/poker/poker/build/Desktop_Qt_6_7_1-Debug/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp -o CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.s
 
 # Object files for target apppoker
 apppoker_OBJECTS = \
@@ -325,7 +380,7 @@ apppoker_OBJECTS = \
 "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o" \
 "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o" \
 "CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o" \
-"CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o"
+"CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 
 # External object files for target apppoker
 apppoker_EXTERNAL_OBJECTS =
@@ -341,7 +396,7 @@ apppoker: CMakeFiles/apppoker.dir/qtsocket.cpp.o
 apppoker: CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.o
 apppoker: CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/apppoker_Main_qml.cpp.o
 apppoker: CMakeFiles/apppoker.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_apppoker_raw_qml_0.cpp.o
-apppoker: CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o
+apppoker: CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o
 apppoker: CMakeFiles/apppoker.dir/build.make
 apppoker: /opt/Qt/6.7.1/gcc_64/lib/libQt6Quick.so.6.7.1
 apppoker: /opt/Qt/6.7.1/gcc_64/lib/libQt6QmlModels.so.6.7.1
@@ -369,7 +424,7 @@ CMakeFiles/apppoker.dir/depend: .qt/rcc/qrc_apppoker_raw_qml_0.cpp
 CMakeFiles/apppoker.dir/depend: .qt/rcc/qrc_qmake_poker.cpp
 CMakeFiles/apppoker.dir/depend: .rcc/qmlcache/apppoker_Main_qml.cpp
 CMakeFiles/apppoker.dir/depend: .rcc/qmlcache/apppoker_qmlcache_loader.cpp
-CMakeFiles/apppoker.dir/depend: apppoker_autogen/EWIEGA46WW/qrc_image.cpp
+CMakeFiles/apppoker.dir/depend: apppoker_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/apppoker.dir/depend: apppoker_qmltyperegistrations.cpp
 CMakeFiles/apppoker.dir/depend: meta_types/apppoker_json_file_list.txt
 CMakeFiles/apppoker.dir/depend: meta_types/qt6apppoker_debug_metatypes.json

@@ -16,11 +16,7 @@ desk::desk()
     }
     file.close();
 
-    std::random_device rd;
-    std::mt19937 g(rd());
-    std::shuffle(library.begin(), library.end(), g);
-
-    temLibrary = library;
+    setTemLibrary();
 
     nowPlay = 0;
     already = 0;
@@ -29,6 +25,7 @@ desk::desk()
 
 void desk::setTemLibrary()
 {
+    temLibrary.clear();
     temLibrary = library;
     std::random_device rd;
     std::mt19937 g(rd());

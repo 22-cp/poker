@@ -311,6 +311,17 @@
                     },
                     {
                         "access": "public",
+                        "arguments": [
+                            {
+                                "name": "n",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "getCardNumber",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
                         "name": "getHandSize",
                         "returnType": "int"
                     },

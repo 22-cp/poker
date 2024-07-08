@@ -37,6 +37,7 @@ public:
     Q_INVOKABLE void select(int n);
     Q_INVOKABLE void setHand(std::vector<poker> Poker);
     Q_INVOKABLE QString getCardName(int n);
+    Q_INVOKABLE int getCardNumber(int n);
     Q_INVOKABLE int getHandSize();
     Q_INVOKABLE std::vector<int> getNum1();
     Q_INVOKABLE bool pushCard(std::vector<int> num);

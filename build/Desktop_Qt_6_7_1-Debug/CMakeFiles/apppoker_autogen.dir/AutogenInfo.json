@@ -1131,7 +1131,7 @@
 		"/usr/share/cmake/Modules/GNUInstallDirs.cmake",
 		"/opt/Qt/6.7.1/gcc_64/lib/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in",
 		"/root/poker/poker/build/Desktop_Qt_6_7_1-Debug/.qt/qml_imports/apppoker_conf.cmake",
-		"/root/poker/poker/image.qrc"
+		"/root/poker/poker/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/root/poker/poker",
 	"CROSS_CONFIG" : false,

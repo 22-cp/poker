@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "poker/CardLibrary"
   "poker/Main.qml"
-  "poker/image.qrc"
+  "poker/resources.qrc"
 )
 
 # Per-language clean rules from dependency scanning.

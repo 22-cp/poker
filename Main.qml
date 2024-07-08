@@ -5,8 +5,8 @@ import QmlPeople
 import QmlDesk
 
 ApplicationWindow {
-    width: 640
-    height: 480
+    width: 1600
+    height: 800
     visible: true
     title: qsTr("hello, world")
 
@@ -79,6 +79,9 @@ ApplicationWindow {
             desk.nowPlay=desk.landlord
         }
         onOverChanged: {
+            n1=0
+            n2=0
+            n3=0
             p1b.visible=false
             p2b.visible=false
             p3b.visible=false
@@ -145,6 +148,8 @@ ApplicationWindow {
     property int n3m: 3
     property int countdownTime: 15
     property int countdownTime1: 5
+    property string source1: "qrc:/images/"
+    property string source2: ".png"
 
     Timer{
         id:countdownTimer
@@ -230,7 +235,7 @@ ApplicationWindow {
         spacing: 40
 
     Column{
-        spacing: 10
+        spacing: 20
         Row{
             spacing: 10
             id:p1b
@@ -403,18 +408,18 @@ ApplicationWindow {
         Repeater{
             model: n1
             delegate: Rectangle{
-                width: 20;height: 20;color: "grey"
+                width: 60;height: 80;color: "grey"
                 property bool isRed:false
-
-                Text{
-                    anchors.centerIn: parent
-                    text: p1.getCardName(index)
+                Image {
+                    anchors.fill: parent
+                    source: source1+p1.getCardNumber(index)+source2
                 }
 
                 TapHandler{
                     onTapped: {
                         p1.select(index+1)
                         parent.color=isRed?"grey":"red"
+                        parent.y=isRed?parent.y+10:parent.y-10
                         isRed=!isRed
                     }
                 }
@@ -595,18 +600,18 @@ ApplicationWindow {
         Repeater{
             model: n2
             delegate: Rectangle{
-                width: 20;height: 20;color: "grey"
+                width: 60;height: 90;color: "grey"
                 property bool isRed:false
-
-                Text{
-                    anchors.centerIn: parent
-                    text: p2.getCardName(index)
+                Image {
+                    anchors.fill: parent
+                    source: source1+p2.getCardNumber(index)+source2
                 }
 
                 TapHandler{
                     onTapped: {
                         p2.select(index+1)
                         parent.color=isRed?"grey":"red"
+                        parent.y=isRed?parent.y+10:parent.y-10
                         isRed=!isRed
                     }
                 }
@@ -784,18 +789,18 @@ ApplicationWindow {
         Repeater{
             model: n3
             delegate: Rectangle{
-                width: 20;height: 20;color: "grey"
+                width: 60;height: 80;color: "grey"
                 property bool isRed:false
-
-                Text{
-                    anchors.centerIn: parent
-                    text: p3.getCardName(index)
+                Image {
+                    anchors.fill: parent
+                    source: source1+p3.getCardNumber(index)+source2
                 }
 
                 TapHandler{
                     onTapped: {
                         p3.select(index+1)
                         parent.color=isRed?"grey":"red"
+                        parent.y=isRed?parent.y+10:parent.y-10
                         isRed=!isRed
                     }
                 }

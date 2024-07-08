@@ -2,7 +2,7 @@
   <qresource prefix="/poker/">
     <file alias="Main.qml">/root/poker/poker/Main.qml</file>
     <file alias="CardLibrary">/root/poker/poker/CardLibrary</file>
-    <file alias="image.qrc">/root/poker/poker/image.qrc</file>
+    <file alias="resources.qrc">/root/poker/poker/resources.qrc</file>
   </qresource>
 </RCC>
 

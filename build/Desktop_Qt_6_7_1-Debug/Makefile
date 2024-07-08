@@ -333,29 +333,29 @@ apppoker_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker_autogen.dir/build.make CMakeFiles/apppoker_autogen.dir/build
 .PHONY : apppoker_autogen/fast
 
-apppoker_autogen/EWIEGA46WW/qrc_image.o: apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o
-.PHONY : apppoker_autogen/EWIEGA46WW/qrc_image.o
+apppoker_autogen/EWIEGA46WW/qrc_resources.o: apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o
+.PHONY : apppoker_autogen/EWIEGA46WW/qrc_resources.o
 
 # target to build an object file
-apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o
-.PHONY : apppoker_autogen/EWIEGA46WW/qrc_image.cpp.o
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o
+.PHONY : apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.o
 
-apppoker_autogen/EWIEGA46WW/qrc_image.i: apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i
-.PHONY : apppoker_autogen/EWIEGA46WW/qrc_image.i
+apppoker_autogen/EWIEGA46WW/qrc_resources.i: apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : apppoker_autogen/EWIEGA46WW/qrc_resources.i
 
 # target to preprocess a source file
-apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i
-.PHONY : apppoker_autogen/EWIEGA46WW/qrc_image.cpp.i
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.i
 
-apppoker_autogen/EWIEGA46WW/qrc_image.s: apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s
-.PHONY : apppoker_autogen/EWIEGA46WW/qrc_image.s
+apppoker_autogen/EWIEGA46WW/qrc_resources.s: apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : apppoker_autogen/EWIEGA46WW/qrc_resources.s
 
 # target to generate assembly for a file
-apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s
-.PHONY : apppoker_autogen/EWIEGA46WW/qrc_image.cpp.s
+apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : apppoker_autogen/EWIEGA46WW/qrc_resources.cpp.s
 
 apppoker_autogen/mocs_compilation.o: apppoker_autogen/mocs_compilation.cpp.o
 .PHONY : apppoker_autogen/mocs_compilation.o
@@ -646,9 +646,9 @@ help:
 	@echo "... apppoker_qmltyperegistration"
 	@echo "... apppoker"
 	@echo "... apppoker_tooling"
-	@echo "... apppoker_autogen/EWIEGA46WW/qrc_image.o"
-	@echo "... apppoker_autogen/EWIEGA46WW/qrc_image.i"
-	@echo "... apppoker_autogen/EWIEGA46WW/qrc_image.s"
+	@echo "... apppoker_autogen/EWIEGA46WW/qrc_resources.o"
+	@echo "... apppoker_autogen/EWIEGA46WW/qrc_resources.i"
+	@echo "... apppoker_autogen/EWIEGA46WW/qrc_resources.s"
 	@echo "... apppoker_autogen/mocs_compilation.o"
 	@echo "... apppoker_autogen/mocs_compilation.i"
 	@echo "... apppoker_autogen/mocs_compilation.s"
