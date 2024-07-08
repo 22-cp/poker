@@ -25,10 +25,10 @@ public:
     people();
     struct poker
     {
-        std::string number;
-        int num;
-        std::string name;
-        std::string color;
+        int number;        //序号
+        int size;          //大小
+        std::string name;  //牌名
+        std::string color; //花色
     };
 
     Q_INVOKABLE void output1();

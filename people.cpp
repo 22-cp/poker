@@ -28,7 +28,13 @@ void people::onRefChanged() {}
 
 void people::toushCard(std::vector<poker> card)
 {
-    hand.insert(hand.end(), card.begin(), card.end());
+    if (hand.size() == 17) {
+        for (int i = 0; i < 3; i++) {
+            auto c = card.begin();
+            hand.push_back(*c);
+            card.erase(card.begin());
+        }
+    }
     sortHand();
 }
 
@@ -37,7 +43,7 @@ void people::sortHand() //将手牌排序
     int n = hand.size();
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
-            if (hand[j].num < hand[j + 1].num) {
+            if (hand[j].size < hand[j + 1].size) {
                 std::swap(hand[j], hand[j + 1]);
             }
         }
@@ -66,6 +72,15 @@ bool people::pushCard(std::vector<int> num)
         return false;
 
     if (num[0] == num1[0])
+        return true;
+
+    if (num[1] == 100)
+        return false;
+
+    if (num1[1] == 100)
+        return true;
+
+    if (num1[1] == 5 && num[1] != 5)
         return true;
 
     if (num1[1] != num[1] || num1[2] <= num[2] || num1[3] != num[3])
@@ -124,7 +139,7 @@ void people::usingCard(std::vector<int> num)
                 cout << "三个" << tem[0].name << endl;
             }
             if (x == 4) {
-                if (tem[0].num == tem[1].num) {
+                if (tem[0].size == tem[1].size) {
                     cout << "三个" << tem[1].name << "带" << tem[3].name << endl;
                 } else {
                     cout << "三个" << tem[1].name << "带" << tem[0].name << endl;
@@ -140,7 +155,7 @@ void people::usingCard(std::vector<int> num)
                 cout << "顺子" << endl;
             }
             if (x == 7) {
-                if (tem[0].num == tem[1].num && tem[1].num == tem[2].num) {
+                if (tem[0].size == tem[1].size && tem[1].size == tem[2].size) {
                     cout << "三个" << tem[0].name << "带一对" << tem[4].name << endl;
                 } else {
                     cout << "三个" << tem[2].name << "带一对" << tem[0].name << endl;
@@ -182,61 +197,61 @@ std::vector<int> people::getNum1()
 int people::straight(std::vector<people::poker> tem)
 {
     num1.clear();
-    if (tem[tem.size() - 1].num > 12) {
+    if (tem[tem.size() - 1].size > 12) {
         return 0;
     }
     int x = 1;
     for (int i = 0; i < tem.size() - 1; i++) {
-        if (tem[i].num != tem[i + 1].num - 1) {
+        if (tem[i].size != tem[i + 1].size - 1) {
             x = 0;
             break;
         }
     }
     num1.push_back(ref);
     num1.push_back(6);
-    num1.push_back(tem[tem.size() - 1].num);
+    num1.push_back(tem[tem.size() - 1].size);
     num1.push_back(tem.size());
     return x;
 }
 int people::pairs(std::vector<people::poker> tem)
 {
     num1.clear();
-    if (tem[tem.size() - 1].num > 12) {
+    if (tem[tem.size() - 1].size > 12) {
         return 0;
     }
     int x = 1;
     for (int i = 0; i < tem.size(); i++) {
-        if (tem[0].num != tem[i].num - i / 2) {
+        if (tem[0].size != tem[i].size - i / 2) {
             x = 0;
             break;
         }
     }
     num1.push_back(ref);
     num1.push_back(8);
-    num1.push_back(tem[tem.size() - 1].num);
+    num1.push_back(tem[tem.size() - 1].size);
     num1.push_back(tem.size());
     return x;
 }
 int people::air1(std::vector<people::poker> tem)
 {
     num1.clear();
-    if (tem[tem.size() - 1].num > 12) {
+    if (tem[tem.size() - 1].size > 12) {
         return 0;
     }
     int x = 0;
     for (int i = 0; i < tem.size() - 2; i++) {
-        if (tem[i].num == tem[i + 2].num) {
+        if (tem[i].size == tem[i + 2].size) {
             x++;
             if (i + 3 >= tem.size() - 2)
                 break;
-            if (tem[i].num != tem[i + 3].num - 1)
+            if (tem[i].size != tem[i + 3].size - 1)
                 break;
             i = i + 2;
         }
     }
     num1.push_back(ref);
     num1.push_back(9);
-    num1.push_back(tem[tem.size() - 1].num);
+    num1.push_back(tem[tem.size() - 1].size);
     num1.push_back(tem.size());
     return x;
 }
@@ -246,11 +261,11 @@ int people::air2(std::vector<people::poker> tem)
     int x = 0;
     int i;
     for (i = 0; i < tem.size() - 2; i++) {
-        if (tem[i].num == tem[i + 2].num) {
+        if (tem[i].size == tem[i + 2].size) {
             x++;
             if (i + 3 >= tem.size() - 2)
                 break;
-            if (tem[i].num != tem[i + 3].num - 1)
+            if (tem[i].size != tem[i + 3].size - 1)
                 break;
             i = i + 2;
         }
@@ -259,7 +274,7 @@ int people::air2(std::vector<people::poker> tem)
     }
     num1.push_back(ref);
     num1.push_back(10);
-    num1.push_back(tem[i].num);
+    num1.push_back(tem[i].size);
     num1.push_back(tem.size());
     return x;
 }
@@ -269,14 +284,14 @@ int people::air3(std::vector<people::poker> tem)
     int x = 0;
     int i;
     for (i = 0; i < tem.size() - 2; i++) {
-        if (tem[i].num == tem[i + 2].num) {
+        if (tem[i].size == tem[i + 2].size) {
             x++;
             if (i + 3 >= tem.size() - 2)
                 break;
-            if (tem[i].num != tem[i + 3].num - 1)
+            if (tem[i].size != tem[i + 3].size - 1)
                 break;
             i = i + 2;
-        } else if (tem[i].num == tem[i + 1].num) {
+        } else if (tem[i].size == tem[i + 1].size) {
             i = i + 1;
         }
         if (i > x + tem.size() / 5)
@@ -284,7 +299,7 @@ int people::air3(std::vector<people::poker> tem)
     }
     num1.push_back(ref);
     num1.push_back(11);
-    num1.push_back(tem[i].num);
+    num1.push_back(tem[i].size);
     num1.push_back(tem.size());
     return x;
 }
@@ -293,68 +308,68 @@ void people::outPut(std::vector<people::poker> tem)
     if (tem.size() == 1) {
         num1.push_back(ref);
         num1.push_back(1);
-        num1.push_back(tem[0].num);
+        num1.push_back(tem[0].size);
         num1.push_back(tem.size());
         return; //单牌
     } else if (tem.size() == 2) {
-        if (tem[0].num == tem[1].num) {
+        if (tem[0].size == tem[1].size) {
             num1.push_back(ref);
             num1.push_back(2);
-            num1.push_back(tem[0].num);
+            num1.push_back(tem[0].size);
             num1.push_back(tem.size());
             return; //对子
         }
-        if (tem[0].num == 14 && tem[1].num == 15) {
+        if (tem[0].size == 14 && tem[1].size == 15) {
             num1.push_back(ref);
             num1.push_back(100);
-            num1.push_back(tem[0].num);
+            num1.push_back(tem[0].size);
             num1.push_back(tem.size());
             return;
         }
     } else if (tem.size() == 3) {
-        if (tem[0].num == tem[2].num) {
+        if (tem[0].size == tem[2].size) {
             num1.push_back(ref);
             num1.push_back(3);
-            num1.push_back(tem[0].num);
+            num1.push_back(tem[0].size);
             num1.push_back(tem.size());
             return; //三不带
         }
     } else if (tem.size() == 4) {
-        if ((tem[0].num == tem[2].num && tem[0].num != tem[3].num)
-            || (tem[1].num == tem[3].num && tem[0].num != tem[3].num)) {
+        if ((tem[0].size == tem[2].size && tem[0].size != tem[3].size)
+            || (tem[1].size == tem[3].size && tem[0].size != tem[3].size)) {
             num1.push_back(ref);
             num1.push_back(4);
-            num1.push_back(tem[2].num);
+            num1.push_back(tem[2].size);
             num1.push_back(tem.size());
             return; //三带一
-        } else if (tem[0].num == tem[3].num) {
+        } else if (tem[0].size == tem[3].size) {
             num1.push_back(ref);
             num1.push_back(5);
-            num1.push_back(tem[0].num);
+            num1.push_back(tem[0].size);
             num1.push_back(tem.size());
             return; //炸弹
         }
     } else if (tem.size() == 5) {
-        if ((tem[4].num == tem[3].num + 1) && (tem[3].num == tem[2].num + 1)
-            && (tem[2].num == tem[1].num + 1) && (tem[1].num == tem[0].num + 1)) {
-            if (tem[4].num <= 12) {
+        if ((tem[4].size == tem[3].size + 1) && (tem[3].size == tem[2].size + 1)
+            && (tem[2].size == tem[1].size + 1) && (tem[1].size == tem[0].size + 1)) {
+            if (tem[4].size <= 12) {
                 num1.push_back(ref);
                 num1.push_back(6);
-                num1.push_back(tem[4].num);
+                num1.push_back(tem[4].size);
                 num1.push_back(tem.size());
                 return;
             }
         }
-        if ((tem[0].num == tem[2].num && tem[3].num == tem[4].num)
-            || tem[2].num == tem[4].num && tem[0].num == tem[1].num) {
+        if ((tem[0].size == tem[2].size && tem[3].size == tem[4].size)
+            || tem[2].size == tem[4].size && tem[0].size == tem[1].size) {
             num1.push_back(ref);
             num1.push_back(7);
-            num1.push_back(tem[2].num);
+            num1.push_back(tem[2].size);
             num1.push_back(tem.size());
             return; //三带一对
         }
     } else if (tem.size() == 6) {
-        if (tem[tem.size() - 1].num > 12) {
+        if (tem[tem.size() - 1].size > 12) {
             num1.push_back(0);
             return;
         }
@@ -371,7 +386,7 @@ void people::outPut(std::vector<people::poker> tem)
             return;
     } else if (tem.size() == 7 || tem.size() == 11) {
         num1.clear();
-        if (tem[tem.size() - 1].num > 12) {
+        if (tem[tem.size() - 1].size > 12) {
             num1.push_back(0);
             return;
         }

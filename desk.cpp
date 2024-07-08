@@ -11,7 +11,7 @@ desk::desk()
     while (std::getline(file, line)) {
         std::istringstream iss(line);
         people::poker Poker;
-        iss >> Poker.num >> Poker.name >> Poker.number >> Poker.color;
+        iss >> Poker.size >> Poker.name >> Poker.number >> Poker.color;
         library.push_back(Poker);
     }
     file.close();
@@ -105,7 +105,9 @@ void desk::dealCard() //从牌库中抽取一张牌加入到手牌
         p3Hand.push_back(*c);
         temLibrary.erase(temLibrary.begin());
     }
+    landlordHand.clear();
     landlordHand = temLibrary;
+    temLibrary.clear();
 }
 std::vector<int> desk::getNum()
 {

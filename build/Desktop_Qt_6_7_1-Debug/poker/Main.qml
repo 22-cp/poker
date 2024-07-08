@@ -61,14 +61,17 @@ ApplicationWindow {
         }
         onLandlordChanged: {
             if(desk.landlord===1){
+                desk.num[0]=p1.ref
                 p1.toushCard(desk.getLandlordHand());
                 n1=p1.getHandSize();
             }
-            if(desk.landlord===2){
+            else if(desk.landlord===2){
+                desk.num[0]=p2.ref
                 p2.toushCard(desk.getLandlordHand());
                 n2=p2.getHandSize();
             }
-            if(desk.landlord===3){
+            else{
+                desk.num[0]=p3.ref
                 p3.toushCard(desk.getLandlordHand());
                 n3=p3.getHandSize();
             }
