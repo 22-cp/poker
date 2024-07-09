@@ -1,0 +1,5 @@
+--resource
+/root/QTfile/poker/build/Imported_Kit-Debug/.qt/rcc/qmake_poker.qrc
+--resource
+/root/QTfile/poker/build/Imported_Kit-Debug/.qt/rcc/apppoker_raw_qml_0.qrc
+/poker/Main.qml

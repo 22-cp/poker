@@ -1,0 +1,5 @@
+module poker
+typeinfo apppoker.qmltypes
+prefer :/poker/
+Main 1.0 Main.qml
+

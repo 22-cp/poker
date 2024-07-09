@@ -1,0 +1,14 @@
+-rootPath
+/root/QTfile/poker
+-cmake-output
+-output-file
+/root/QTfile/poker/build/Imported_Kit-Debug/.qt/qml_imports/apppoker_build.cmake
+-importPath
+/root/QTfile/poker/build/Imported_Kit-Debug/poker
+-importPath
+/root/QTfile/poker/build/Imported_Kit-Debug
+-importPath
+/usr/lib/qt6/qml
+-qrcFiles
+/root/QTfile/poker/build/Imported_Kit-Debug/.qt/rcc/qmake_poker.qrc
+/root/QTfile/poker/build/Imported_Kit-Debug/.qt/rcc/apppoker_raw_qml_0.qrc

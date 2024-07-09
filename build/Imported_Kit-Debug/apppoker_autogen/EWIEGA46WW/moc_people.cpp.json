@@ -1,0 +1,158 @@
+{
+    "classes": [
+        {
+            "className": "people",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "output1",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "sortHand",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "num",
+                            "type": "std::vector<int>"
+                        }
+                    ],
+                    "name": "usingCard",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "select",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "Poker",
+                            "type": "std::vector<poker>"
+                        }
+                    ],
+                    "name": "setHand",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "getCardName",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "getCardNumber",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "getTemNumber",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "getHandSize",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "getNum1",
+                    "returnType": "std::vector<int>"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "num",
+                            "type": "std::vector<int>"
+                        }
+                    ],
+                    "name": "pushCard",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "card",
+                            "type": "std::vector<poker>"
+                        }
+                    ],
+                    "name": "toushCard",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "ref",
+                    "notify": "refChanged",
+                    "read": "getRef",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setRef"
+                }
+            ],
+            "qualifiedClassName": "people",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "refChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "onRefChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "people.h",
+    "outputRevision": 68
+}

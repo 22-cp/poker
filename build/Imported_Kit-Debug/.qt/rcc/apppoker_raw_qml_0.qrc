@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/poker/">
+    <file alias="Main.qml">/root/QTfile/poker/Main.qml</file>
+    <file alias="CardLibrary">/root/QTfile/poker/CardLibrary</file>
+    <file alias="resources.qrc">/root/QTfile/poker/resources.qrc</file>
+  </qresource>
+</RCC>
+

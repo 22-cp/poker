@@ -1,0 +1,251 @@
+{
+    "classes": [
+        {
+            "className": "desk",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "getNumRef",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "dealCard",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getP1Hand",
+                    "returnType": "std::vector<people::poker>"
+                },
+                {
+                    "access": "public",
+                    "name": "getP2Hand",
+                    "returnType": "std::vector<people::poker>"
+                },
+                {
+                    "access": "public",
+                    "name": "getP3Hand",
+                    "returnType": "std::vector<people::poker>"
+                },
+                {
+                    "access": "public",
+                    "name": "getLandlordHand",
+                    "returnType": "std::vector<people::poker>"
+                },
+                {
+                    "access": "public",
+                    "name": "setTemLibrary",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getNum",
+                    "returnType": "std::vector<int>"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setAlready",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "nowPlay",
+                    "notify": "nowPlayChanged",
+                    "read": "getNowPlay",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setNowPlay"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 1,
+                    "name": "num",
+                    "notify": "numChanged",
+                    "read": "getNum",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "std::vector<int>",
+                    "user": false,
+                    "write": "setNum"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 2,
+                    "name": "landlord",
+                    "notify": "landlordChanged",
+                    "read": "getLandlord",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setLandlord"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 3,
+                    "name": "already",
+                    "notify": "alreadyChanged",
+                    "read": "getAlready",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setAlready"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 4,
+                    "name": "temLandlord",
+                    "notify": "temLandlordChanged",
+                    "read": "getTemLandlord",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setTemLandlord"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 5,
+                    "name": "mark",
+                    "notify": "markChanged",
+                    "read": "getMark",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setMark"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 6,
+                    "name": "over",
+                    "notify": "overChanged",
+                    "read": "getOver",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setOver"
+                }
+            ],
+            "qualifiedClassName": "desk",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "nowPlayChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "numChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "landlordChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "alreadyChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "temLandlordChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "markChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "overChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "onNowPlayChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onNumChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onLandlordChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onAlreadyChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onTemLandlordChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onMarkChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "onOverChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "desk.h",
+    "outputRevision": 68
+}

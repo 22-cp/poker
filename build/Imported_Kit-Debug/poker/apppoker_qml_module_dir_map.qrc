@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/poker">/root/QTfile/poker/build/Imported_Kit-Debug/poker</file>
+
+  </qresource>
+</RCC>

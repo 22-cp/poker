@@ -38,6 +38,7 @@ public:
     Q_INVOKABLE void setHand(std::vector<poker> Poker);
     Q_INVOKABLE QString getCardName(int n);
     Q_INVOKABLE int getCardNumber(int n);
+    Q_INVOKABLE int getTemNumber(int n);
     Q_INVOKABLE int getHandSize();
     Q_INVOKABLE std::vector<int> getNum1();
     Q_INVOKABLE bool pushCard(std::vector<int> num);
@@ -72,4 +73,5 @@ private:
     std::vector<int> output; //存储出牌的牌
     int ref;                 //序号
     bool playCard;
+    std::vector<poker> tem; //存储出的牌的详细信息
 };

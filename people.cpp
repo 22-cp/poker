@@ -92,7 +92,7 @@ bool people::pushCard(std::vector<int> num)
 void people::usingCard(std::vector<int> num)
 {
     num1.clear();
-    if (output.size() != 0 && output.size() <= hand.size()) {
+    if (output.size() != 0) {
         int n = output.size();
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -117,7 +117,7 @@ void people::usingCard(std::vector<int> num)
             cout << "不符合出牌规则" << endl;
             return;
         }
-        std::vector<poker> tem; //创建一个临时容器存储要出的牌
+        tem.clear(); //创建一个临时容器存储要出的牌
         for (int i = 0; i < output.size(); i++) {
             tem.push_back(hand[output[i] - 1]);
         }
@@ -511,6 +511,11 @@ QString people::getCardName(int n)
 int people::getCardNumber(int n)
 {
     return hand[n].number;
+}
+
+int people::getTemNumber(int n)
+{
+    return tem[n].number;
 }
 
 int people::getHandSize()

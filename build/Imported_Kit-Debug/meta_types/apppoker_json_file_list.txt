@@ -1,0 +1,2 @@
+/root/QTfile/poker/build/Imported_Kit-Debug/apppoker_autogen/include/../EWIEGA46WW/moc_desk.cpp.json
+/root/QTfile/poker/build/Imported_Kit-Debug/apppoker_autogen/include/../EWIEGA46WW/moc_people.cpp.json

@@ -1,0 +1,12 @@
+--bare
+-I
+/root/QTfile/poker/build/Imported_Kit-Debug
+-I
+/usr/lib/qt6/qml
+--resource
+/root/QTfile/poker/build/Imported_Kit-Debug/.qt/rcc/qmake_poker.qrc
+--resource
+/root/QTfile/poker/build/Imported_Kit-Debug/.qt/rcc/apppoker_raw_qml_0.qrc
+/root/QTfile/poker/Main.qml
+--json
+/root/QTfile/poker/build/Imported_Kit-Debug/apppoker_qmllint.json
