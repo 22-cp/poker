@@ -34,7 +34,8 @@ qt_add_qml_module(
   RESOURCES
   CardLibrary
   RESOURCES
-  resources.qrc)
+  resources.qrc
+  SOURCES datatype.h datatype.cpp)
 
 target_compile_features(apppoker PRIVATE cxx_std_20)
 

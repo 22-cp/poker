@@ -1,0 +1,114 @@
+{
+    "classes": [
+        {
+            "className": "qtserver",
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "adds",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "port",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "listen_to_client",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "listen_close",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "std::vector<people::poker>"
+                        },
+                        {
+                            "type": "int"
+                        }
+                    ],
+                    "name": "send_data",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "newiValue",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setValue",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "m_Value",
+                    "notify": "valueChanged",
+                    "read": "iValue",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setValue"
+                }
+            ],
+            "qualifiedClassName": "qtserver",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "successed_disconnect_to_server",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "data_is_coming",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "valueChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "read_from_client",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "newConnect",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "ondisconnect",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qtserver.h",
+    "outputRevision": 68
+}

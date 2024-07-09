@@ -1,6 +1,54 @@
 #include "people.h"
+#include "desk.h"
 
-people::people() {}
+people::people()
+{
+    std::ifstream file("./poker/CardLibrary");
+    if (!file.is_open()) {
+        std::cerr << "牌库加载失败!" << endl;
+        return;
+    }
+    std::string line;
+    while (std::getline(file, line)) {
+        std::istringstream iss(line);
+        people::poker Poker;
+        iss >> Poker.size >> Poker.name >> Poker.number >> Poker.color;
+        library.push_back(Poker);
+    }
+    file.close();
+}
+
+void people::mplay(std::vector<int> num)
+{
+    if (num[1] == 1) {
+        for (int i = hand.size() - 1; i > -1; i--) {
+            if (hand[i].size > num[2]) {
+                select(i + 1);
+                usingCard(num);
+                break;
+            }
+        }
+    } else if (num[1] == 2) {
+        for (int i = hand.size() - 1; i > 0; i--) {
+            if (hand[i].size > num[2] && hand[i - 1].size == hand[i].size) {
+                select(i + 1);
+                select(i);
+                usingCard(num);
+                break;
+            }
+        }
+    } else {
+        for (int i = hand.size(); i > 1; i--) {
+            if (hand[i].size > num[2] && hand[i].size == hand[i - 2].size) {
+                select(i + 1);
+                select(i);
+                select(i - 1);
+                usingCard(num);
+                break;
+            }
+        }
+    }
+}
 
 void people::output1()
 {
@@ -10,6 +58,26 @@ void people::output1()
         cout << poker.color << " " << poker.name;
         cout << endl;
         l++;
+    }
+}
+
+void people::setHand1(std::vector<int> x)
+{
+    x.erase(x.begin());
+    int n = x.size();
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (x[j] < x[j + 1]) {
+                std::swap(x[j], x[j + 1]);
+            }
+        }
+    }
+    int j = 0;
+    for (int i = 0; i < library.size(); i++) {
+        if (library[i].number == x[j]) {
+            hand.push_back(library[i]);
+            j++;
+        }
     }
 }
 
@@ -49,19 +117,10 @@ void people::sortHand() //将手牌排序
         }
     }
 }
-
-// void people::setPlayCard(bool s)
-// {
-//     playCard = s;
-//     emit playCardChanged();
-// }
-
-// void people::onPlayCardChanged() {}
-
-// bool people::getPlayCard()
-// {
-//     return playCard;
-// }
+std::vector<people::poker> people::getTem()
+{
+    return tem;
+}
 
 bool people::pushCard(std::vector<int> num)
 {
@@ -105,7 +164,7 @@ void people::usingCard(std::vector<int> num)
             if (output[i] == output[i + 1]) {
                 output.erase(output.begin() + i + 1);
                 output.erase(output.begin() + i);
-                if (output.size() == 0) {
+                if (output.size() == 0 && output.size() <= hand.size()) {
                     cout << "不符合出牌规则" << endl;
                     return;
                 }

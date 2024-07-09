@@ -1023,6 +1023,12 @@
 	"DEP_FILE_RULE_NAME" : "apppoker_autogen/timestamp",
 	"HEADERS" : 
 	[
+		[
+			"/root/QTfile/poker/datatype.h",
+			"MU",
+			"EWIEGA46WW/moc_datatype.cpp",
+			null
+		],
 		[ "/root/QTfile/poker/desk.h", "MU", "EWIEGA46WW/moc_desk.cpp", null ],
 		[
 			"/root/QTfile/poker/people.h",
@@ -1132,6 +1138,7 @@
 	"SETTINGS_FILE" : "/root/QTfile/poker/build/Imported_Kit-Debug/CMakeFiles/apppoker_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/root/QTfile/poker/datatype.cpp", "MU", null ],
 		[ "/root/QTfile/poker/desk.cpp", "MU", null ],
 		[ "/root/QTfile/poker/main.cpp", "MU", null ],
 		[ "/root/QTfile/poker/people.cpp", "MU", null ],

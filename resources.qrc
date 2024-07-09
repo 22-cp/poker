@@ -77,5 +77,7 @@
         <file>images/background4.png</file>
         <file>images/close.png</file>
         <file>images/background5.png</file>
+        <file>mp3/backgroundMusic.mp3</file>
+        <file>mp3/gameMusic.mp3</file>
     </qresource>
 </RCC>

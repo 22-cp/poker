@@ -1,4 +1,4 @@
-set(qml_import_scanner_imports_count 28)
+set(qml_import_scanner_imports_count 30)
 set(qml_import_scanner_import_0 "CLASSNAME;QtQuick2Plugin;LINKTARGET;Qt6::qtquick2plugin;NAME;QtQuick;PATH;/usr/lib/qt6/qml/QtQuick;PLUGIN;qtquick2plugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQuick/;RELATIVEPATH;QtQuick;TYPE;module;")
 set(qml_import_scanner_import_1 "CLASSNAME;QtQmlMetaPlugin;LINKTARGET;Qt6::QmlMeta;NAME;QtQml;PATH;/usr/lib/qt6/qml/QtQml;PLUGIN;qmlmetaplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQml/;RELATIVEPATH;QtQml;TYPE;module;")
 set(qml_import_scanner_import_2 "CLASSNAME;QtQmlPlugin;LINKTARGET;Qt6::qmlplugin;NAME;QtQml.Base;PATH;/usr/lib/qt6/qml/QtQml/Base;PLUGIN;qmlplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQml/Base/;RELATIVEPATH;QtQml/Base;TYPE;module;")
@@ -26,5 +26,7 @@ set(qml_import_scanner_import_23 "CLASSNAME;QmlShapesPlugin;LINKTARGET;Qt6::qmls
 set(qml_import_scanner_import_24 "CLASSNAME;QtQuickLayoutsPlugin;LINKTARGET;Qt6::qquicklayoutsplugin;NAME;QtQuick.Layouts;PATH;/usr/lib/qt6/qml/QtQuick/Layouts;PLUGIN;qquicklayoutsplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQuick/Layouts/;RELATIVEPATH;QtQuick/Layouts;TYPE;module;")
 set(qml_import_scanner_import_25 "NAME;QmlPeople;TYPE;module;")
 set(qml_import_scanner_import_26 "NAME;QmlDesk;TYPE;module;")
-set(qml_import_scanner_import_27 "CLASSNAME;QMultimediaQuickModule;COMPONENTS;/usr/lib/qt6/qml/QtMultimedia/Video.qml;LINKTARGET;Qt6::quickmultimedia;NAME;QtMultimedia;PATH;/usr/lib/qt6/qml/QtMultimedia;PLUGIN;quickmultimediaplugin;PREFER;:/qt-project.org/imports/QtMultimedia/;RELATIVEPATH;QtMultimedia;TYPE;module;")
+set(qml_import_scanner_import_27 "NAME;Qtserver;TYPE;module;")
+set(qml_import_scanner_import_28 "NAME;Qtsocket;TYPE;module;")
+set(qml_import_scanner_import_29 "CLASSNAME;QMultimediaQuickModule;COMPONENTS;/usr/lib/qt6/qml/QtMultimedia/Video.qml;LINKTARGET;Qt6::quickmultimedia;NAME;QtMultimedia;PATH;/usr/lib/qt6/qml/QtMultimedia;PLUGIN;quickmultimediaplugin;PREFER;:/qt-project.org/imports/QtMultimedia/;RELATIVEPATH;QtMultimedia;TYPE;module;")
 

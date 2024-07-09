@@ -41,6 +41,28 @@
                     },
                     {
                         "access": "public",
+                        "arguments": [
+                            {
+                                "name": "t",
+                                "type": "std::vector<people::poker>"
+                            }
+                        ],
+                        "name": "setTem",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "n",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "getTem",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
                         "name": "getNum",
                         "returnType": "std::vector<int>"
                     },
@@ -362,6 +384,33 @@
                         ],
                         "name": "toushCard",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "x",
+                                "type": "std::vector<int>"
+                            }
+                        ],
+                        "name": "setHand1",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "num",
+                                "type": "std::vector<int>"
+                            }
+                        ],
+                        "name": "mplay",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "getTem",
+                        "returnType": "std::vector<poker>"
                     }
                 ],
                 "object": true,
@@ -406,6 +455,239 @@
             }
         ],
         "inputFile": "people.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "qtserver",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "adds",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "port",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "listen_to_client",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "listen_close",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "std::vector<people::poker>"
+                            },
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "name": "send_data",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "newiValue",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setValue",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "m_Value",
+                        "notify": "valueChanged",
+                        "read": "iValue",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setValue"
+                    }
+                ],
+                "qualifiedClassName": "qtserver",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "successed_disconnect_to_server",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "data_is_coming",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "valueChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "name": "read_from_client",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "newConnect",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "ondisconnect",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qtserver.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "qtsocket",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "toaddress",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "toport",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "new_connect",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "std::vector<int>"
+                            },
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "name": "send_data",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "socket_close1",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "send_data1",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "newiValue",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setValue",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "m_Value",
+                        "notify": "valueChanged",
+                        "read": "iValue",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setValue"
+                    }
+                ],
+                "qualifiedClassName": "qtsocket",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "readyRead1",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "recievedata",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "valueChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "name": "write_data",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "socket_close",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "sendmassage",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qtsocket.h",
         "outputRevision": 68
     }
 ]

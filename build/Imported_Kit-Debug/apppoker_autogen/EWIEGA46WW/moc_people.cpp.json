@@ -110,6 +110,33 @@
                     ],
                     "name": "toushCard",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "x",
+                            "type": "std::vector<int>"
+                        }
+                    ],
+                    "name": "setHand1",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "num",
+                            "type": "std::vector<int>"
+                        }
+                    ],
+                    "name": "mplay",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getTem",
+                    "returnType": "std::vector<poker>"
                 }
             ],
             "object": true,

@@ -25,6 +25,8 @@ public:
     Q_INVOKABLE std::vector<people::poker> getP3Hand();
     Q_INVOKABLE std::vector<people::poker> getLandlordHand();
     Q_INVOKABLE void setTemLibrary();
+    Q_INVOKABLE void setTem(std::vector<people::poker> t);
+    Q_INVOKABLE int getTem(int n);
 
     void setTemLandlord(int ref);
     int getTemLandlord();
@@ -73,4 +75,5 @@ private:
     int nowPlay;                             //当前出牌人
     int already;                             //准备人数
     int over;
+    std::vector<int> tem;
 };

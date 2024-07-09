@@ -45,6 +45,19 @@ void desk::setOver(int n)
 
 void desk::onOverChanged() {}
 
+void desk::setTem(std::vector<people::poker> t)
+{
+    tem.clear();
+    for (int i = 0; i < t.size(); i++) {
+        tem.push_back(t[i].number);
+    }
+}
+
+int desk::getTem(int n)
+{
+    return tem[n];
+}
+
 std::vector<people::poker> desk::getLandlordHand()
 {
     return landlordHand;

@@ -1,0 +1,119 @@
+{
+    "classes": [
+        {
+            "className": "qtsocket",
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "toaddress",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "toport",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "new_connect",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "std::vector<int>"
+                        },
+                        {
+                            "type": "int"
+                        }
+                    ],
+                    "name": "send_data",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "socket_close1",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "send_data1",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "newiValue",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setValue",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "m_Value",
+                    "notify": "valueChanged",
+                    "read": "iValue",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setValue"
+                }
+            ],
+            "qualifiedClassName": "qtsocket",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "readyRead1",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "recievedata",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "valueChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "write_data",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "socket_close",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "sendmassage",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qtsocket.h",
+    "outputRevision": 68
+}

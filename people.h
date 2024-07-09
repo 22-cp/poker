@@ -43,6 +43,9 @@ public:
     Q_INVOKABLE std::vector<int> getNum1();
     Q_INVOKABLE bool pushCard(std::vector<int> num);
     Q_INVOKABLE void toushCard(std::vector<poker> card);
+    Q_INVOKABLE void setHand1(std::vector<int> x);
+    Q_INVOKABLE void mplay(std::vector<int> num);
+    Q_INVOKABLE std::vector<poker> getTem();
 
     // Q_INVOKABLE void setPlayCard(bool s);
     // Q_INVOKABLE bool getPlayCard();
@@ -68,10 +71,11 @@ public slots:
     //void onPlayCardChanged();
 
 private:
-    std::vector<int> num1;   //存储出牌信息
-    std::vector<poker> hand; //手牌
-    std::vector<int> output; //存储出牌的牌
-    int ref;                 //序号
+    std::vector<int> num1;      //存储出牌信息
+    std::vector<poker> hand;    //手牌
+    std::vector<int> output;    //存储出牌的牌
+    int ref;                    //序号
+    std::vector<poker> library; //牌库
     bool playCard;
     std::vector<poker> tem; //存储出的牌的详细信息
 };

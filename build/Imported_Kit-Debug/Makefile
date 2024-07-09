@@ -498,6 +498,30 @@ build/Imported_Kit-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/build/Imported_Kit-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.s
 .PHONY : build/Imported_Kit-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.cpp.s
 
+datatype.o: datatype.cpp.o
+.PHONY : datatype.o
+
+# target to build an object file
+datatype.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/datatype.cpp.o
+.PHONY : datatype.cpp.o
+
+datatype.i: datatype.cpp.i
+.PHONY : datatype.i
+
+# target to preprocess a source file
+datatype.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/datatype.cpp.i
+.PHONY : datatype.cpp.i
+
+datatype.s: datatype.cpp.s
+.PHONY : datatype.s
+
+# target to generate assembly for a file
+datatype.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apppoker.dir/build.make CMakeFiles/apppoker.dir/datatype.cpp.s
+.PHONY : datatype.cpp.s
+
 desk.o: desk.cpp.o
 .PHONY : desk.o
 
@@ -664,6 +688,9 @@ help:
 	@echo "... build/Imported_Kit-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.o"
 	@echo "... build/Imported_Kit-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.i"
 	@echo "... build/Imported_Kit-Debug/.rcc/qmlcache/apppoker_qmlcache_loader.s"
+	@echo "... datatype.o"
+	@echo "... datatype.i"
+	@echo "... datatype.s"
 	@echo "... desk.o"
 	@echo "... desk.i"
 	@echo "... desk.s"

@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-31de4adcdf7472d903af.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "poker",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-17724b86550055c456d8.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-604edac5caae3cea1edf.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-00c64521adf9ed3a37a1.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-820528be489e26f12c6c.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker-Debug-62adf02f59bd7436c926.json",
+					"name" : "apppoker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker_autogen-Debug-84ddb7ce61e363947dbc.json",
+					"name" : "apppoker_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker_autogen_timestamp_deps-Debug-b88f019e8cae1f949eb4.json",
+					"name" : "apppoker_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker_qmlimportscan-Debug-51f5f198c46fc6a6664a.json",
+					"name" : "apppoker_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker_qmllint-Debug-3adf85926e422ce515c1.json",
+					"name" : "apppoker_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker_qmllint_json-Debug-b335e4eb243b3bc1a190.json",
+					"name" : "apppoker_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker_qmllint_module-Debug-6ceb2b33260b60e28b22.json",
+					"name" : "apppoker_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker_qmltyperegistration-Debug-0a4db98ba3104a87fbbf.json",
+					"name" : "apppoker_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apppoker_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apppoker_tooling-Debug-49f3c44c49c7ea421bb3.json",
+					"name" : "apppoker_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/root/QTfile/poker/build/Imported_Kit-Debug",
+		"source" : "/root/QTfile/poker"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

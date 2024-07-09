@@ -3,6 +3,8 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QmlPeople
 import QmlDesk
+import Qtserver
+import Qtsocket
 import QtMultimedia
 
 ApplicationWindow {
@@ -11,6 +13,7 @@ ApplicationWindow {
     visible: true
     title: qsTr("🐮🐮斗地主")
     id:mainwindow
+
     Rectangle{
         id:gamewindow
         width:1300
@@ -26,7 +29,7 @@ ApplicationWindow {
 
         Text {
             id: gamename
-            visible: ture
+            visible: true
             text: "🐮🐮斗地主"
             color: "black"
             font.pointSize: 70
@@ -143,7 +146,7 @@ Rectangle{
                         anchors.fill:parent
                     }
                     Text {                 //游戏标题
-                        text: qsTr("房主开始")
+                        text: qsTr("人机对战")
                         font.pointSize: 30
                         font.family: "Arial"
                         font.weight: Font.Bold
@@ -173,11 +176,17 @@ Rectangle{
                     anchors.fill:parent
                 }
                 Text {
-                    text:qsTr("游客开始")
+                    text:qsTr("联机")
                     font.pointSize: 30
                     font.family: "Arial"
                     font.weight: Font.Bold
                     anchors.centerIn: parent
+                }
+                TapHandler{
+                    onTapped: {
+                        vistorwindow.visible=true
+                        gamemodechose.visible=false
+                    }
                 }
             }
 
@@ -208,6 +217,7 @@ Rectangle{
                     }
             }
         }
+
         Button{
             id:setbotton
             background: Rectangle{
@@ -225,10 +235,12 @@ Rectangle{
             TapHandler{
                 onTapped: {
                     settingwindow.visible=true
+
                 }
             }
         }
 }
+
 Rectangle{
     id:settingwindow
     width:700
@@ -311,11 +323,12 @@ Rectangle{
             TapHandler{
                 onTapped: {
                     settingwindow.visible=false
-                    playwindow.visible=false
+                    gamemodechose.visible=false
                     gamewindow.visible=true
                 }
             }
     }
+
     RoundButton{
         id:closewindow
         width:50
@@ -339,54 +352,22 @@ Rectangle{
 
 }
 
-
-
-// Rectangle{
-//     id:playwindow
-//     width:1400
-//     height:800
-//     visible: false
-//     anchors.fill:parent
-//     radius:10
-
-//     Image {
-//         source: "qrc:/images/background4"
-//         anchors.fill:parent
-//     }
-
-//     Button{
-//         id:setbotton1
-//         background: Rectangle{
-//             color:"transparent"
-//         }
-//         width:80
-//         height: 80
-//         Image {
-//             source: "qrc:/images/settings"
-//             anchors.fill:setbotton
-//         }
-//         anchors.right: playwindow.right
-//         anchors.top:playwindow.top
-//         anchors.margins: 70
-//         TapHandler{
-//             onTapped: {
-//                 settingwindow.visible=true
-//             }
-//         }
-//     }
-
 property int n: 0
 property int n1: 0
+
 // property int n2: p2.getHandSize()
 // property int n3: p3.getHandSize()
 // property int n2m: 3
 // property int n3m: 3
-property int countdownTime: 15
+
+property int countdownTime: 2
 property int countdownTime1: 5
 property string source1: "qrc:/images/"
 property string source2: ".png"
 
-Rectangle{
+
+
+Rectangle{                     //hosterwidnow
        id:playwindow
        width: 1400
        height: 700
@@ -404,20 +385,24 @@ Rectangle{
 
        People{
            id:p1
+           ref:2
        }
        People{
            id:p2
+           ref: 3
        }
 
        Desk{
                id:desk
                onNowPlayChanged: {
                    if(desk.nowPlay===p.ref){
-                       pb.visible=true
-                   }
-                   else if(desk.nowPlay===p2.ref){
+                       nult.visible=false
+                       playrow.visible=true
                    }
                    else{
+                       nult.visible=true
+                       playrow.visible=false
+                       countdownTimer.start()
                    }
                }
                onAlreadyChanged: {
@@ -430,25 +415,16 @@ Rectangle{
                        p2.setHand(desk.getP3Hand())
                        p2.sortHand()
                        readyrow.visible=false
-                       // p2c.visible=false
-                       // p3c.visible=false
                        playcolumn.visible=true
                        markrow.visible=true
                        cardrow.visible=true
                        n=p.getHandSize()
-                       // n2=p2.getHandSize()
-                       // n3=p3.getHandSize()
-                       // p2d.visible=truea
-                       // p3d.visible=true
                   }
                }
                onMarkChanged: {
                    if(desk.mark===3){
                        markrow.visible=false
-                       // p2a.visible=false
-                       // p3a.visible=false
                        desk.landlord=desk.temLandlord
-                       //desk.nowPlay=desk.landlord
                    }
                }
                onLandlordChanged: {
@@ -457,105 +433,21 @@ Rectangle{
                        p.toushCard(desk.getLandlordHand());
                        n=p.getHandSize();
                    }
-                   else if(desk.landlord===2){
-                       // desk.num[0]=p2.ref
-                       // p2.toushCard(desk.getLandlordHand());
-                       // n2=p2.getHandSize();
-                   }
-                   else{
-                       // desk.num[0]=p3.ref
-                       // p3.toushCard(desk.getLandlordHand());
-                       // n3=p3.getHandSize();
-                   }
-
                    desk.nowPlay=desk.landlord
                }
+
                onOverChanged: {
                    playrow.visible=false
-                   // p2b.visible=false
-                   // p3b.visible=false
                    cardrow.visible=false
-                   // p2d.visible=false
-                   // p3d.visible=false
-                   if(over===landlord){
                        if(landlord===p.ref){
                            win.visible=true
-                           // p2fail.visible=true
-                           // p3fail.visible=true
-                       }
-                       else if(landlord===p2.ref){
-                           fail.visible=true
-                           // p2win.visible=true
-                           // p3fail.visible=true
                        }
                        else{
                            fail.visible=true
-                           // p2fail.visible=true
-                           // p3win.visible=true
                        }
-                   }
-                   else{
-                       if(landlord===p.ref){
-                           fail.visible=true
-                           // p2win.visible=true
-                           // p3win.visible=true
-                       }
-                       // else if(landlord===p2.ref){
-                       //     p1win.visible=true
-                       //     p2fail.visible=true
-                       //     p3win.visible=true
-                       // }
-                       // else{
-                       //     p1win.visible=true
-                       //     p2win.visible=true
-                       //     p3fail.visible=true
-                       // }
-                   }
                    countdownTimer1.start()
                }
            }
-        //    Timer{
-        //        id:countdownTimer
-        //        interval: 1000
-        //        repeat: true
-        //        running: false
-        //        onTriggered: {
-        //            if(countdownTime>0){
-        //                countdownTime--
-        //            }
-        //            else{
-        //                countdownTimer.stop()
-        //                if(desk.nowPlay===p1.ref){
-        //                    desk.nowPlay=p2.ref
-        //                    countdownTime=15
-        //                    if(desk.num[0]!==0&&desk.num[0]!==p2.ref){
-        //                        p1time.visible=false
-        //                        p2time.visible=true
-        //                        countdownTimer.start()
-        //                    }
-        //                }
-        //                else if(desk.nowPlay===p2.ref){
-        //                    desk.nowPlay=p3.ref
-        //                    countdownTime=15
-        //                    if(desk.num[0]!==0&&desk.num[0]!==p3.ref){
-        //                        p2time.visible=false
-        //                        p3time.visible=true
-        //                        countdownTimer.start()
-        //                    }
-        //                }
-        //                else{
-        //                    desk.nowPlay=p1.ref
-        //                    countdownTime=15
-        //                    if(desk.num[0]!==0&&desk.num[0]!==p1.ref){
-        //                        p3time.visible=false
-        //                        p1time.visible=true
-        //                        countdownTimer.start()
-        //                    }
-        //                }
-        //            }
-        //        }n
-        // }
-
            Timer{
                id:countdownTimer1
                interval: 1000
@@ -570,26 +462,109 @@ Rectangle{
                        countdownTime1=5
                        win.visible=false
                        fail.visible=false
-                       // p2win.visible=false
-                       // p2fail.visible=false
-                       // p3win.visible=false
-                       // p3fail.visible=false
                        desk.setAlready(-1)
                        desk.mark=0;
                        desk.temLandlord=0
                        readyrow.visible=true
-                       // p2c.color="#FFFF00"
-                       // p3c.color="#FFFF00"
                        readybutton.enabled=true
-                       // p2cc.enabled=true
-                       // p3cc.enabled=true
-                       // p2c.visible=true
-                       // p3c.visible=true
                        desk.setTemLibrary()
                        n1=0
                    }
                }
            }
+
+           Timer{
+               id:countdownTimer
+               interval: 1000
+               repeat: true
+               running: false
+               onTriggered: {
+                   if(countdownTime>0){
+                       countdownTime--
+                   }
+                   else{
+                       countdownTimer.stop()
+                       countdownTime=2
+                       if(desk.nowPlay===p1.ref){
+                           if(desk.num[0]!==p1.ref){
+                               if(desk.num[1]!==1&&desk.num[1]!==2&&desk.num[1]!==3){
+                                   desk.nowPlay=p2.ref
+                               }
+                               else{
+                                   p1.mplay(desk.getNum())
+                                   if(p1.pushCard(desk.getNum())){
+                                    desk.num=p1.getNum1()
+                                    desk.setTem(p1.getTem())
+                                    n1=desk.num[3]
+                                    n1=n1-1
+                                    n1=n1+1
+                                   }
+                                   if(p1.getHandSize()){
+                                   desk.nowPlay=p2.ref
+                                   }
+                                   else{
+                                       desk.over=p1.ref
+                                   }
+                               }
+                           }
+                           else{
+                               p1.select(p1.getHandSize()-1)
+                               p1.usingCard(desk.getNum())
+                               desk.num=p1.getNum1()
+                               desk.setTem(p1.getTem())
+                               n1=desk.num[3]
+                               n1=n1-1
+                               n1=n1+1
+                               if(p1.getHandSize()){
+                               desk.nowPlay=p2.ref
+                               }
+                               else{
+                                   desk.over=p1.ref
+                               }
+                           }
+                       }
+                       else if(desk.nowPlay===p2.ref){
+                           if(desk.num[0]!==p2.ref){
+                               if(desk.num[1]!==1&&desk.num[1]!==2&&desk.num[1]!==3){
+                                   desk.nowPlay=p.ref
+                               }
+                               else{
+                                   p2.mplay(desk.getNum())
+                                   if(p2.pushCard(desk.getNum())){
+                                       desk.num=p2.getNum1()
+                                       desk.setTem(p2.getTem())
+                                       n1=desk.num[3]
+                                       n1=n1-1
+                                       n1=n1+1
+                                   }
+                                   if(p2.getHandSize()){
+                                   desk.nowPlay=p.ref
+                                   }
+                                   else{
+                                       desk.over=p2.ref
+                                   }
+                               }
+                           }
+                           else{
+                               p2.select(p2.getHandSize()-1)
+                               p2.usingCard(desk.getNum())
+                               desk.num=p2.getNum1()
+                               desk.setTem(p2.getTem())
+                               n1=desk.num[3]
+                               n1=n1-1
+                               n1=n1+1
+                               if(p2.getHandSize()){
+                               desk.nowPlay=p.ref
+                               }
+                               else{
+                                   desk.over=p2.ref
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+
            Row{
                id:showcard
                anchors.top: parent.top
@@ -605,7 +580,7 @@ Rectangle{
                        color: "transparent"
                        Image {
                            anchors.fill: parent
-                           source: source1+p.getTemNumber(index)+source2
+                           source: source1+desk.getTem(index)+source2
                        }
                    }
                    onModelChanged: {
@@ -618,14 +593,15 @@ Rectangle{
            id:readyrow
            anchors.bottom: parent.bottom
            anchors.horizontalCenter: parent.horizontalCenter
+           anchors.bottomMargin: 150
            height: 200
            width: parent.width
            spacing:100
 
            RoundButton{
                id:readybutton
-               width: 200
-               height: 70
+               width: 300
+               height: 100
                anchors.top: parent.top
                anchors.horizontalCenter: parent.horizontalCenter
                Image {
@@ -633,16 +609,15 @@ Rectangle{
                    anchors.fill:parent
                }
                Text {
-                   text: qsTr("ready")
+                   text: qsTr("准备")
                    anchors.centerIn: parent
-                   font.pointSize: 24
+                   font.pointSize: 30
                }
                enabled: true
                  TapHandler{
                      onTapped: {
                          parent.enabled=false
                          desk.setAlready(1)
-                         //playcolumn.visible=true
                      }
                  }
            }
@@ -662,6 +637,7 @@ Rectangle{
                    height: 90
                    visible: true
                    spacing: 20
+
                    RoundButton{
                      width: 100
                      height: 50
@@ -669,11 +645,13 @@ Rectangle{
                    source: "qrc:/images/nonbutton"
                    anchors.fill:parent
                }
+
                Text {
                    text: qsTr("不叫")
                    anchors.centerIn: parent
                    font.pointSize: 24
                }
+
                enabled: true
                  TapHandler{
                      onTapped: {
@@ -682,6 +660,7 @@ Rectangle{
                      }
                  }
            }
+
                    Repeater{
                         model:3
                         delegate: RoundButton{
@@ -690,11 +669,13 @@ Rectangle{
                             source: "qrc:/images/nonbutton"
                             anchors.fill:parent
                         }
+
                         Text{
                             anchors.centerIn: parent
                             text: 3-index+"分"
                             font.pointSize: 24
                         }
+
                          TapHandler{
                             onTapped: {
                                 desk.temLandlord=p.ref
@@ -706,6 +687,14 @@ Rectangle{
                     }
            }
                }
+
+               Row{
+                   id:nult
+                   width: parent.width
+                   height: 90
+                   visible: false
+               }
+
                Row{
                    id:playrow
                    width: parent.width
@@ -727,6 +716,9 @@ Rectangle{
                enabled: true
                  TapHandler{
                      onTapped: {
+                         if(desk.num[0]!==p.ref){
+                             desk.nowPlay=2
+                         }
                      }
                  }
            }
@@ -748,12 +740,13 @@ Rectangle{
                          p.usingCard(desk.getNum())
                          if(p.pushCard(desk.getNum())){
                              desk.num=p.getNum1()
+                             desk.setTem(p.getTem())
                              n1=desk.num[3]
                              n1=n1-1
                              n1=n1+1
                              if(p.getHandSize()){
                                  n=p.getHandSize()
-                                 desk.nowPlay=p.ref
+                                 desk.nowPlay=p1.ref
                              }
                              else{
                                  desk.over=p.ref
@@ -763,12 +756,14 @@ Rectangle{
                  }
            }
                }
+
                Row{
                    id:cardrow
                    visible: true
                    spacing: -15
                    width: parent.width
                    height: 160
+
                    Repeater{
                         model:n
                         delegate: Rectangle{
@@ -791,6 +786,7 @@ Rectangle{
                         }
                     }
                }
+
                Rectangle{
                    id:win
                    visible: false
@@ -805,6 +801,7 @@ Rectangle{
                        color: "red"
                    }
                }
+
                Rectangle{
                    id:fail
                    visible: false
@@ -822,4 +819,224 @@ Rectangle{
        }
 
 }
+
+Rectangle{                                    //游客界面
+    id:vistorwindow
+    width: 1400
+    height: 700
+    visible: false
+    anchors.fill:parent
+    Image {
+        source: "qrc:/images/background5"
+        anchors.fill:parent
+    }
+Row{
+    anchors.centerIn: parent
+    spacing:100
+    RoundButton{
+        id:readybutton2
+        width: 300
+        height: 100
+        Image {
+            source: "qrc:/images/nonbutton"
+            anchors.fill:parent
+        }
+        Text {
+            text: qsTr("准备")
+            anchors.centerIn: parent
+            font.pointSize: 30
+        }
+        enabled: true
+          TapHandler{
+              onTapped: {
+                  parent.enabled=false
+                  tcpfile.visible=true
+                  //playcolumn.visible=true
+              }
+          }
+    }
+    RoundButton{
+        id:getback3
+        width:300
+        height:100
+        radius: 10
+        background: Rectangle{
+            color:"transparent"
+        }
+            Image {
+                source: "qrc:/images/nonbutton"
+                anchors.fill:parent
+            }
+            Text {                 //游戏标题
+                text: qsTr("返回主菜单")
+                font.pointSize: 30
+                font.family: "Arial"
+                anchors.centerIn: parent
+        }
+
+            TapHandler{
+                onTapped: {
+                    vistorwindow.visible=false
+                    gamewindow.visible=true
+                }
+            }
+    }
 }
+}
+Server{
+    id:qtserver1
+    onValueChanged:{
+        if(qtserver1.m_Value===2){
+            playcard.visible = true
+            tcpfile.visible = false
+        }
+        if(qtserver1.m_Value===1){
+            desk.setAlready(1);
+            qtserver1.setValue(0)
+        }
+    }
+}
+Socket{
+    id:qtsocket1
+    onValueChanged: {
+        if(qtsocket1.m_Value===1)
+        {
+            playcard.visible = true
+            tcpfile.visible = false
+        }
+        if(qtsocket1.m_Value===3)
+        {
+            send_data1()
+        }
+    }
+}
+Rectangle{
+    Rectangle{
+        width:1700
+        height:800
+        color:"#424242"
+        id:tcpfile
+        visible:false
+        Column{
+            id:column1
+            spacing: 5
+            anchors.centerIn: parent
+            Button{
+                text:qsTr("server")
+                onClicked:{
+                    server1.visible = true
+                    socket1.visible = false
+                    column1.visible = false
+                }
+            }
+            Button{
+                text:qsTr("socket")
+                onClicked:{
+                    server1.visible = false
+                    socket1.visible = true
+                    column1.visible = false
+                }
+            }
+        }
+        Column{
+            id:server1;visible: false
+            anchors.centerIn: parent;spacing: 5
+            Row{
+                spacing:5
+                Rectangle{
+                    clip:true
+                    width:200;height: 30
+                    color:"white"
+                    TextInput{
+                        text:qsTr("127.0.0.1")
+                        id:textinput1
+                        width:200;height:30
+                        font.pointSize: 15
+                    }
+                }
+                Rectangle{
+                    width:100;height:30
+                    Button{
+                        width:100;height:30
+                        text:qsTr("buildserver")
+                        onClicked: {
+                            qtserver1.listen_to_client(textinput1.text,textinput2.text)
+                        }
+                    }
+
+                }
+            }
+            Row{
+                spacing:5
+                Rectangle{
+                    clip:true;width:200;height: 30
+                    color:"white"
+                    TextInput{
+                        text:qsTr("10058")
+                        id:textinput2
+                        width:200;height:30
+                        font.pointSize: 15
+                    }
+                }
+                Rectangle{
+                    width:100;height:30
+                    Button{
+                        width:100;height:30
+                        text:qsTr("disconnect")
+                    }
+                }
+            }
+        }
+        Column{
+            id:socket1;visible: false
+            anchors.centerIn: parent;spacing: 5
+            Row{
+                spacing:5
+                Rectangle{
+                    clip:true
+                    width:200;height: 30
+                    color:"white"
+                    TextInput{
+                        text:qsTr("127.0.0.1")
+                        id:textinput3
+                        width:200;height:30
+                        font.pointSize: 15
+                    }
+                }
+                Rectangle{
+                    width:100;height:30
+                    Button{
+                        width:100;height:30
+                        text:qsTr("connect")
+                        onClicked: {
+                            qtsocket1.new_connect(textinput3.text,textinput4.text)
+                        }
+                    }
+                }
+            }
+            Row{
+                spacing:5
+                Rectangle{
+                    clip:true
+                    width:200;height: 30
+                    color:"white"
+                    TextInput{
+                        text:qsTr("10058")
+                        id:textinput4
+                        width:200;height:30
+                        font.pointSize: 15
+                    }
+                }
+                Rectangle{
+                    width:100;height:30
+                    Button{
+                        width:100;height:30
+                        text:qsTr("disconnect")
+                    }
+                }
+            }
+        }
+    }
+}
+}
+

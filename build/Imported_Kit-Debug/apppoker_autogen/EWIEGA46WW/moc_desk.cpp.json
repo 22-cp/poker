@@ -40,6 +40,28 @@
                 },
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "name": "t",
+                            "type": "std::vector<people::poker>"
+                        }
+                    ],
+                    "name": "setTem",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "n",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "getTem",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
                     "name": "getNum",
                     "returnType": "std::vector<int>"
                 },
